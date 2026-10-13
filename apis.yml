@@ -1,23 +1,122 @@
 aid: contabo
 name: Contabo
-description: 'Contabo is a company surfaced via the API Evangelist harvest backlog (source: market-gap:object-storage)
-  and added to the network as a stub for full-pipeline profiling.'
+image: https://cdn.contabo.com/og_fair-priced_EN-1.webp
+description: Contabo GmbH is a German hosting provider offering VPS, VDS, dedicated and GPU servers, S3-compatible object storage, private networking, DNS and domains. The Contabo API (https://api.contabo.com,
+  OpenAPI 3.0.3, 157 operations) manages compute instances, snapshots, images, object storage, private networks, secrets, users, roles and tags using OAuth2 password-grant bearer tokens from auth.contabo.com;
+  Contabo also ships the cntb CLI and a Terraform provider.
 url: https://raw.githubusercontent.com/api-evangelist/contabo/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:market-gap:object-storage
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-13 (local-v5; was harvest)
 specificationVersion: '0.20'
 created: '2026-10-13'
 modified: '2026-10-13'
 tags:
 - Company
-apis: []
+- Cloud Hosting
+- VPS
+- Object Storage
+- Infrastructure
+- Dedicated Servers
+- DNS
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: AgentSkill
+  url: skills/_index.yml
+- type: AgenticAccess
+  url: agentic-access/contabo-agentic-access.yml
+- type: Plans
+  url: plans/contabo-plans-pricing.yml
+- type: Spectral
+  url: rules/contabo-rules.yml
+- type: JSONLD
+  url: json-ld/contabo-context.jsonld
+- type: Vocabulary
+  url: vocabulary/contabo-vocabulary.yml
+- type: DataModel
+  url: data-model/contabo-data-model.yml
+- type: CLI
+  url: cli/contabo-cli.yml
+- type: Conventions
+  url: conventions/contabo-conventions.yml
+- type: ErrorCatalog
+  url: errors/contabo-problem-types.yml
+- type: Conformance
+  url: conformance/contabo-conformance.yml
+- type: LLMsTxt
+  url: llms/contabo-llms.txt
+- type: Hosts
+  url: hosts/contabo-hosts.yml
+- type: Vendors
+  url: vendors/contabo-vendors.yml
+- type: SDKs
+  url: packages/contabo-packages.yml
+- type: Packages
+  url: packages/contabo-packages.yml
+- type: Authentication
+  url: authentication/contabo-authentication.yml
+- type: DomainSecurity
+  url: security/contabo-domain-security.yml
 - type: Website
   url: https://contabo.com
+- type: Documentation
+  url: https://docs.contabo.com/
+- type: APIReference
+  url: https://api.contabo.com/
+- type: Blog
+  url: https://contabo.com/blog/
+- type: GettingStarted
+  url: https://docs.contabo.com/docs/references/api-documentation/
+- type: Pricing
+  url: https://contabo.com/en/pricing
+- type: PrivacyPolicy
+  url: https://contabo.com/en/legal/privacy
+- type: SignUp
+  url: https://contabo.com/en/register/email/
+- type: Support
+  url: https://help.contabo.com/en/support/home
+- type: TermsOfService
+  url: https://contabo.com/en/legal/terms-and-conditions
+- type: GitHubOrganization
+  url: https://github.com/contabo
+- type: DeveloperPortal
+  url: https://contabo.com/en/contabo-api/
+apis:
+- aid: contabo:contabo-api
+  name: Contabo API
+  description: REST API to manage Contabo compute instances, snapshots, custom images, object storage, private networks, VIPs, DNS, domains, secrets, users, roles and tags.
+  humanURL: https://api.contabo.com/
+  baseURL: https://api.contabo.com
+  tags:
+  - Cloud Hosting
+  - VPS
+  - Object Storage
+  properties:
+  - type: OpenAPI
+    url: openapi/contabo-openapi.yml
+  - type: Documentation
+    url: https://api.contabo.com/
+  - type: CLI
+    url: https://github.com/contabo/cntb
+  - type: JSONSchema
+    url: json-schema/contabo-create-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-patch-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-create-user-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-reinstall-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-update-user-request-schema.json
+x-enrichment:
+  date: '2026-10-13'
+  status: enriched
+  artifacts_added: 20
+  pass: local-v5

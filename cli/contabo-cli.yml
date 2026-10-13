@@ -1,0 +1,7 @@
+generated: '2026-10-13'
+method: searched
+source: https://github.com/contabo/cntb
+name: cntb
+install: Download a release binary from https://github.com/contabo/cntb/releases (latest v1.7, 2026-07-15)
+commands:
+- note: The API reference introduction states "Contabo provides also a CLI tool which enables you to manage your resources easily from the command line" and links github.com/contabo/cntb; cntb wraps the Contabo API resources (instances, snapshots, images, object storage, private networks, secrets, users, tags).

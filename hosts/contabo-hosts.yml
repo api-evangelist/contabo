@@ -1,0 +1,122 @@
+generated: '2026-10-13'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 7
+  own: 6
+  other_domain: 0
+  platform: 1
+  roles:
+  - docs
+  - other
+  - source
+  - support
+  - website
+hosts:
+- host: api.contabo.com
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types:
+  - APIReference
+  serves:
+  - api
+  - docs
+  registrable_domain: contabo.com
+  role: docs
+  relation: own
+- host: contabo.com
+  found_by:
+  - pointer
+  - probed
+  - docs-index
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Website
+  - Blog
+  - Pricing
+  - PrivacyPolicy
+  - SignUp
+  - TermsOfService
+  - DeveloperPortal
+  serves:
+  - docs
+  - cdn
+  vendor: cloudflare
+  registrable_domain: contabo.com
+  role: website
+  relation: own
+- host: docs.contabo.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - docs-index
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Documentation
+  - GettingStarted
+  serves:
+  - docs
+  - cdn
+  vendor: fastly
+  registrable_domain: contabo.com
+  role: docs
+  relation: own
+- host: github.com
+  found_by:
+  - pointer
+  types:
+  - GitHubOrganization
+  serves: []
+  registrable_domain: github.com
+  role: source
+  relation: platform
+- host: help.contabo.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - docs-index
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Support
+  serves:
+  - docs
+  - support
+  vendor: freshdesk
+  registrable_domain: contabo.com
+  role: support
+  relation: own
+- host: my.contabo.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: contabo.com
+  role: other
+  relation: own
+- host: new.contabo.com
+  found_by:
+  - probed
+  - site-links
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: contabo.com
+  role: other
+  relation: own

@@ -1,0 +1,112 @@
+generated: '2026-10-13'
+method: searched
+source: https://contabo.com/en/pricing
+name: Contabo pricing
+audience: business-product
+pricing_basis: tiered-subscription
+published: true
+delivery:
+  delivery: managed
+note: Prices are rendered client-side (fetch-url.py --render); the page splits the
+  figure into separate elements ("5" "50" "€" "/ month"), so price_text joins those
+  elements with spaces. A plain GET does not carry the prices. The API itself carries
+  no separate charge on the page; it manages the products priced here. Only Core VPS
+  tiers recorded; the page also lists other product lines.
+plan_count: 6
+plans:
+- name: Cloud VPS 4
+  description: Core VPS tier (price including VAT, as rendered for the default locale)
+  price: 5.5
+  currency: EUR
+  billing_period: month
+  price_text: 5 50 € / month
+  features:
+  - 4 vCPU Cores
+  - 8 GB RAM
+  - 100 GB SSD
+  - 200 Mbit/s Port
+  - Unlimited Traffic*
+  limits:
+  - 4 vCPU Cores
+  - 8 GB RAM
+  - 100 GB SSD
+- name: Cloud VPS 6
+  description: Core VPS tier (price including VAT, as rendered for the default locale)
+  price: 7.5
+  currency: EUR
+  billing_period: month
+  price_text: 7 50 € / month
+  features:
+  - 6 vCPU Cores
+  - 12 GB RAM
+  - 200GB SSD / 100GB NVMe
+  - 300 Mbit/s Port
+  - Unlimited Traffic*
+  limits:
+  - 6 vCPU Cores
+  - 12 GB RAM
+  - 200GB SSD / 100GB NVMe
+- name: Cloud VPS 8
+  description: Core VPS tier (price including VAT, as rendered for the default locale)
+  price: 14.0
+  currency: EUR
+  billing_period: month
+  price_text: 14 00 € / month
+  features:
+  - 8 vCPU Cores
+  - 24 GB RAM
+  - 300GB SSD / 150GB NVMe
+  - 600 Mbit/s Port
+  - Unlimited Traffic*
+  limits:
+  - 8 vCPU Cores
+  - 24 GB RAM
+  - 300GB SSD / 150GB NVMe
+- name: Cloud VPS 12
+  description: Core VPS tier (price including VAT, as rendered for the default locale)
+  price: 25.0
+  currency: EUR
+  billing_period: month
+  price_text: 25 00 € / month
+  features:
+  - 12 vCPU Cores
+  - 48 GB RAM
+  - 400GB SSD / 200GB NVMe
+  - 800 Mbit/s Port
+  - Unlimited Traffic*
+  limits:
+  - 12 vCPU Cores
+  - 48 GB RAM
+  - 400GB SSD / 200GB NVMe
+- name: Cloud VPS 16
+  description: Core VPS tier (price including VAT, as rendered for the default locale)
+  price: 37.0
+  currency: EUR
+  billing_period: month
+  price_text: 37 00 € / month
+  features:
+  - 16 vCPU Cores
+  - 64 GB RAM
+  - 500GB SSD / 250GB NVMe
+  - 1 Gbit/s Port
+  - Unlimited Traffic*
+  limits:
+  - 16 vCPU Cores
+  - 64 GB RAM
+  - 500GB SSD / 250GB NVMe
+- name: Cloud VPS 18
+  description: Core VPS tier (price including VAT, as rendered for the default locale)
+  price: 49.0
+  currency: EUR
+  billing_period: month
+  price_text: 49 00 € / month
+  features:
+  - 18 vCPU Cores
+  - 96 GB RAM
+  - 600GB SSD / 300GB NVMe
+  - 1 Gbit/s Port
+  - Unlimited Traffic*
+  limits:
+  - 18 vCPU Cores
+  - 96 GB RAM
+  - 600GB SSD / 300GB NVMe

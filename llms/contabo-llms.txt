@@ -1,0 +1,71 @@
+# Contabo Product Documentation
+
+> Contabo Product Documentation
+
+- [Page not found](http://docs.contabo.com/404/): The page you're looking for doesn’t exist or has moved. Check the URL, use the navigation to browse sections, or return to the homepage.
+- [Product Documentation](http://docs.contabo.com/docs/): Product documentation for Contabo cloud infrastructure: Core, Performance, Max Performance, Storage and GPU VPS, Dedicated Servers and Object Storage.
+
+## Product Documentation
+
+> Product documentation for Contabo cloud infrastructure: Core, Performance, Max Performance, Storage and GPU VPS, Dedicated Servers and Object Storage.
+
+- [Servers & Hosting]()
+- [Network Services]()
+- [Storage]()
+- [Domains]()
+- [DPA]()
+- [Account Management]()
+- [References](http://docs.contabo.com/docs/references/): Links to the Contabo API documentation, the cntb command-line client and the Terraform provider for automating Contabo infrastructure.
+
+### Servers & Hosting
+
+
+
+- [VPS](http://docs.contabo.com/docs/servers-hosting/vps/): Contabo VPS: KVM virtual private servers in three plan families — Core VPS (SSD), Performance VPS (NVMe, AMD EPYC) and Storage VPS (high-capacity SSD).
+- [GPU VPS](http://docs.contabo.com/docs/servers-hosting/gpu-vps/): GPU VPS: Performance VPS with a dedicated NVIDIA RTX 6000 PRO Blackwell GPU (96 GB VRAM) via PCIe passthrough — 18 vCPU, 96 GB RAM, 900 GB NVMe, Ubuntu CUDA.
+- [Max Performance VPS](http://docs.contabo.com/docs/servers-hosting/max-performance-vps/): Max Performance VPS (Cloud VDS): virtual dedicated servers with 6 to 24 dedicated AMD EPYC 7282 vCores, reserved RAM, NVMe storage and nested virtualization.
+- [Images](http://docs.contabo.com/docs/servers-hosting/images/): Operating system, 1-Click app, blockchain and custom images available for Contabo VPS, VDS and Dedicated Servers, with availability per product.
+- [Dedicated Servers](http://docs.contabo.com/docs/servers-hosting/dedicated-servers/): Dedicated Servers: single-tenant bare-metal servers with AMD Ryzen 9, AMD EPYC Genoa, or AMD EPYC Turin CPUs, ECC RAM, NVMe/SSD/HDD storage, and IPMI access.
+- [VPS Auto Backup](http://docs.contabo.com/docs/servers-hosting/vps-auto-backup/): Contabo Auto Backup add-on for VPS: daily incremental off-server backups, up to 10 kept for 10 days, restore to the original VPS, relation to snapshots.
+
+### Network Services
+
+
+
+- [Private Networking](http://docs.contabo.com/docs/network-services/private-networking/): Contabo Private Networking: isolated Layer 2 networks between VPS and VDS instances in the same region, unmetered traffic, up to /22 per network.
+- [IP Assignment](http://docs.contabo.com/docs/network-services/ip-assignment/): IPv4 and IPv6 on Contabo servers: one static IPv4 and a /64 IPv6 per server, additional IPv4 limits per product (1 VPS, 15 VDS, 25 Dedicated), activation.
+- [DNS Management](http://docs.contabo.com/docs/network-services/dns-management/): Contabo DNS Management: nameservers ns1 to ns3.contabo.net, record types, TTL rules, zone creation in the Control Panel and reverse DNS for IPv4 and IPv6.
+- [Firewall](http://docs.contabo.com/docs/network-services/firewall/): Contabo Firewall for VPS and VDS: network-level filtering, default-drop inbound, TCP/UDP/ICMP rules with IPv4/IPv6 sources and port ranges, and limitations.
+
+### Storage
+
+
+
+- [Object Storage](http://docs.contabo.com/docs/storage/object-storage/): Contabo Object Storage: S3-compatible storage on a Ceph cluster with triple replication, regions in the EU, US Central and Singapore, and 5 TB objects.
+
+### Domains
+
+
+
+- [Domain Management](http://docs.contabo.com/docs/domains/domain-management/): Registering, transferring and managing domains with Contabo: 300+ TLDs, Control Panel workflow, contact handles, nameservers, transfer requirements and DNS.
+
+### DPA
+
+
+
+- [DPA](http://docs.contabo.com/docs/dpa/dpa/): Data Processing Agreement (DPA) with Contabo under the GDPR: covered services, how to create, conclude and download it in the Control Panel, and languages.
+
+### Account Management
+
+
+
+- [User Management](http://docs.contabo.com/docs/account-management/user-management/): User Management at Contabo: account users, their roles (Owner, Full Access, Technician, Billing Admin and more) and an access matrix by area.
+
+### References
+
+> Links to the Contabo API documentation, the cntb command-line client and the Terraform provider for automating Contabo infrastructure.
+
+- [API Documentation](http://docs.contabo.com/docs/references/api-documentation/): Contabo API reference: OpenAPI specification, OAuth2 authentication and endpoints for instances, images, snapshots, networks and Object Storage.
+- [CLI (cntb)](http://docs.contabo.com/docs/references/cli-cntb/): cntb is Contabo's open-source command-line client on GitHub. It wraps the Contabo API to manage instances, images, snapshots, networks and Object Storage.
+- [Terraform Provider](http://docs.contabo.com/docs/references/terraform-provider/): The official Contabo Terraform provider on GitHub, for declaring instances, images, snapshots, private networks and Object Storage as infrastructure-as-code.
+

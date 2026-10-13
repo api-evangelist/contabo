@@ -1,0 +1,24 @@
+generated: '2026-10-13'
+method: searched
+source: https://api.contabo.com/
+auth:
+  style: OAuth2 password grant (ClientId, ClientSecret, API user, API password) against https://auth.contabo.com/auth/realms/contabo/protocol/openid-connect/token; access token sent as Authorization Bearer
+request_id:
+  header: x-request-id
+  note: The reference examples send an x-request-id UUID on every request; the spec declares it as a request header parameter.
+idempotency:
+  coverage: none
+  note: No Idempotency-Key mechanism is documented in the API reference.
+errors:
+  note: The Responses section documents status codes including 429 "Rate-limit reached. Please wait for some time before doing more requests."
+rate_limit_signaling:
+  status: 429
+reversibility:
+  surfaces:
+  - write: createSnapshot
+    reversal: rollbackSnapshot
+    note: Roll an instance back to a snapshot; no window stated.
+  - write: cancelDomain
+    reversal: revokeCancelDomain
+    note: Revoke a domain cancellation; no window stated in the reference.
+  grade: documented

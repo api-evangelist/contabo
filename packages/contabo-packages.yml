@@ -1,0 +1,20 @@
+generated: '2026-10-13'
+method: searched
+source: https://api.github.com/orgs/contabo/repos
+packages:
+- name: cntb
+  registry: github-releases
+  url: https://github.com/contabo/cntb
+  language: go
+  official: true
+  version: v1.7
+  published: '2026-07-15'
+  note: Contabo Command Line Interface; version from api.github.com/repos/contabo/cntb/releases/latest
+- name: contabo/contabo
+  registry: terraform
+  url: https://registry.terraform.io/providers/contabo/contabo
+  language: hcl
+  official: true
+  version: 0.1.44
+  published: '2026-07-16'
+  note: Terraform Provider for Contabo Cloud-Services, source github.com/contabo/terraform-provider-contabo

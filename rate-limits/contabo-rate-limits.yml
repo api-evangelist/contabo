@@ -1,0 +1,9 @@
+generated: '2026-10-13'
+method: none
+source: https://api.contabo.com/
+name: Contabo API rate limits
+limit_count: 0
+limits: []
+note: The API reference documents only that HTTP 429 means "Rate-limit reached. Please
+  wait for some time before doing more requests." No numeric limit or rate-limit headers
+  are published.

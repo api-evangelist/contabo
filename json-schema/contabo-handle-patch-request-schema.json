@@ -1,0 +1,207 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/contabo/main/json-schema/contabo-handle-patch-request-schema.json",
+  "title": "HandlePatchRequest",
+  "x-generated": "2026-10-13",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/contabo-openapi.yml#/components/schemas/HandlePatchRequest",
+  "type": "object",
+  "properties": {
+    "alias": {
+      "type": "string",
+      "maxLength": 255,
+      "minLength": 1,
+      "description": "Customer-chosen alias for the handle. Unique per customer (exact, case-sensitive). Optional for now."
+    },
+    "email": {
+      "type": "string",
+      "maxLength": 255,
+      "minLength": 1,
+      "description": "Handle email"
+    },
+    "gender": {
+      "type": "string",
+      "description": "Handle gender",
+      "enum": [
+        "male",
+        "female",
+        "na"
+      ]
+    },
+    "birthInfo": {
+      "description": "The birth info of the handle",
+      "allOf": [
+        {
+          "$ref": "#/$defs/HandleBirthInfo"
+        }
+      ]
+    },
+    "address": {
+      "description": "Address details for handle",
+      "allOf": [
+        {
+          "$ref": "#/$defs/HandleAddress"
+        }
+      ]
+    },
+    "phone": {
+      "description": "Handle phone",
+      "allOf": [
+        {
+          "$ref": "#/$defs/HandlePhone"
+        }
+      ]
+    },
+    "fax": {
+      "description": "Handle fax",
+      "allOf": [
+        {
+          "$ref": "#/$defs/HandlePhone"
+        }
+      ]
+    },
+    "nicItEntityType": {
+      "type": "string",
+      "description": "NIC.it entity type (required for .it registrant contacts). Valid values: natural_person, individual_firm, non_profit, public_org, other, company, foreign_legal_entity."
+    },
+    "legalStatus": {
+      "type": "string",
+      "enum": [
+        "company",
+        "association",
+        "other"
+      ],
+      "description": "Legal status of an organization handle. Applies to organization handles only and is ignored for person handles. Sent to AFNIC as AFNIC_PM_LEGAL_STATUS, which is required for every .fr contact. Defaults to company when omitted."
+    },
+    "pin": {
+      "type": "string",
+      "maxLength": 255,
+      "minLength": 1,
+      "description": "Registration code / fiscal code. Required for .it registrant contacts (NIC.it NIC_IT_REG_CODE — codice fiscale or VAT number)."
+    },
+    "sidnLegalForm": {
+      "type": "string",
+      "maxLength": 255,
+      "minLength": 1,
+      "description": "SIDN legal form for .nl contacts (SIDN_LEGAL_FORM). Free-form per the SIDN schema — e.g. BV, NV, Stichting, Eenmanszaak, VOF."
+    },
+    "sidnLegalFormRegNo": {
+      "type": "string",
+      "maxLength": 255,
+      "minLength": 1,
+      "description": "SIDN legal form registration number for .nl contacts (KvK / Chamber of Commerce number, SIDN_LEGAL_REG_NO)."
+    }
+  },
+  "required": [
+    "email",
+    "gender",
+    "address",
+    "phone"
+  ],
+  "$defs": {
+    "HandleAddress": {
+      "type": "object",
+      "properties": {
+        "street": {
+          "type": "string",
+          "maxLength": 255,
+          "minLength": 1,
+          "description": "Street"
+        },
+        "streetNumber": {
+          "type": "string",
+          "maxLength": 255,
+          "minLength": 1,
+          "description": "Street Number"
+        },
+        "city": {
+          "type": "string",
+          "maxLength": 100,
+          "minLength": 1,
+          "description": "City"
+        },
+        "country": {
+          "type": "string",
+          "maxLength": 100,
+          "minLength": 1,
+          "description": "Country"
+        },
+        "zipCode": {
+          "type": "string",
+          "maxLength": 50,
+          "minLength": 1,
+          "description": "ZipCode"
+        },
+        "siret": {
+          "type": "string",
+          "maxLength": 255,
+          "minLength": 1,
+          "description": "Siret"
+        },
+        "region": {
+          "type": "string",
+          "maxLength": 255,
+          "minLength": 1,
+          "description": "Region"
+        }
+      },
+      "required": [
+        "street",
+        "streetNumber",
+        "city",
+        "country",
+        "zipCode"
+      ]
+    },
+    "HandleBirthInfo": {
+      "type": "object",
+      "properties": {
+        "date": {
+          "format": "date-time",
+          "type": "string",
+          "description": "Date"
+        },
+        "city": {
+          "type": "string",
+          "maxLength": 255,
+          "minLength": 1,
+          "description": "City"
+        },
+        "zipCode": {
+          "type": "string",
+          "maxLength": 50,
+          "minLength": 1,
+          "description": "Zipcode"
+        },
+        "country": {
+          "type": "string",
+          "maxLength": 100,
+          "minLength": 1,
+          "description": "Country"
+        }
+      }
+    },
+    "HandlePhone": {
+      "type": "object",
+      "properties": {
+        "prefix": {
+          "type": "string",
+          "maxLength": 5,
+          "minLength": 1,
+          "description": "prefix"
+        },
+        "number": {
+          "type": "string",
+          "maxLength": 50,
+          "minLength": 1,
+          "description": "number"
+        }
+      },
+      "required": [
+        "prefix",
+        "number"
+      ]
+    }
+  }
+}

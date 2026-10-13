@@ -1,0 +1,203 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/contabo/main/json-schema/contabo-create-instance-request-schema.json",
+  "title": "CreateInstanceRequest",
+  "x-generated": "2026-10-13",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/contabo-openapi.yml#/components/schemas/CreateInstanceRequest",
+  "type": "object",
+  "properties": {
+    "imageId": {
+      "type": "string",
+      "description": "ImageId to be used to setup the compute instance. Default is Ubuntu 22.04",
+      "default": "afecbb85-e2fc-46f0-9684-b46b1faf00bb"
+    },
+    "productId": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Default is V153",
+      "default": "V153"
+    },
+    "region": {
+      "type": "string",
+      "enum": [
+        "EU",
+        "US-central",
+        "US-east",
+        "US-west",
+        "SIN",
+        "UK",
+        "AUS",
+        "JPN",
+        "IND"
+      ],
+      "minLength": 1,
+      "description": "Instance Region where the compute instance should be located. Default is EU",
+      "default": "EU"
+    },
+    "sshKeys": {
+      "type": "array",
+      "items": {
+        "type": "integer",
+        "format": "int64"
+      },
+      "description": "Array of `secretId`s of public SSH keys for logging into as `defaultUser` with administrator/root privileges. Applies to Linux/BSD systems. Please refer to Secrets Management API."
+    },
+    "rootPassword": {
+      "type": "integer",
+      "format": "int64",
+      "description": "`secretId` of the password for the `defaultUser` with administrator/root privileges. For Linux/BSD please use SSH, for Windows RDP. Please refer to Secrets Management API."
+    },
+    "userData": {
+      "type": "string",
+      "description": "[Cloud-Init](https://cloud-init.io/) Config in order to customize during start of compute instance."
+    },
+    "license": {
+      "type": "string",
+      "description": "Additional licence in order to enhance your chosen product, mainly needed for software licenses on your product (not needed for windows).",
+      "enum": [
+        "cPanel5",
+        "cPanel30",
+        "cPanel50",
+        "cPanel100",
+        "cPanel150",
+        "cPanel200",
+        "cPanel250",
+        "cPanel300",
+        "cPanel350",
+        "cPanel400",
+        "cPanel450",
+        "cPanel500",
+        "cPanel550",
+        "cPanel600",
+        "cPanel650",
+        "cPanel700",
+        "cPanel750",
+        "cPanel800",
+        "cPanel850",
+        "cPanel900",
+        "cPanel950",
+        "cPanel1000",
+        "PleskAdmin",
+        "PleskHost",
+        "PleskPro"
+      ]
+    },
+    "period": {
+      "type": "integer",
+      "format": "int64",
+      "description": "Initial contract period in months. Available periods are: 1, 12 and 24 months. Default to 1 month",
+      "default": 1
+    },
+    "displayName": {
+      "type": "string",
+      "maxLength": 255,
+      "description": "The display name of the instance. Pass an empty string to leave it unset."
+    },
+    "defaultUser": {
+      "type": "string",
+      "enum": [
+        "root",
+        "admin",
+        "administrator"
+      ],
+      "description": "Default user name created for login during (re-)installation with administrative privileges. Allowed values for Linux/BSD are `admin` (use sudo to apply administrative privileges like root) or `root`. Allowed values for Windows are `admin` (has administrative privileges like administrator) or `administrator`.",
+      "default": "admin"
+    },
+    "addOns": {
+      "description": "Set attributes in the addons object for the corresponding ones that need to be added to the instance",
+      "allOf": [
+        {
+          "$ref": "#/$defs/CreateInstanceAddons"
+        }
+      ]
+    },
+    "applicationId": {
+      "type": "string",
+      "description": "Application ID"
+    }
+  },
+  "required": [
+    "period"
+  ],
+  "$defs": {
+    "AddOnRequest": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "Id of the Addon. Please refer to list [here](https://contabo.com/en/product-list/?show_ids=true)."
+        },
+        "quantity": {
+          "type": "integer",
+          "format": "int64",
+          "description": "The number of Addons you wish to aquire."
+        }
+      },
+      "required": [
+        "id",
+        "quantity"
+      ]
+    },
+    "CreateInstanceAddons": {
+      "type": "object",
+      "properties": {
+        "privateNetworking": {
+          "type": "object",
+          "additionalProperties": true,
+          "description": "Set this attribute if you want to upgrade your instance with the Private Networking addon.   Please provide an empty object for the time being as value. There will be more configuration possible   in the future."
+        },
+        "additionalIps": {
+          "type": "object",
+          "additionalProperties": true,
+          "description": "Set this attribute if you want to upgrade your instance with the Additional IPs addon. Please provide an empty object for the time being as value. There will be more configuration possible in the future."
+        },
+        "backup": {
+          "type": "object",
+          "additionalProperties": true,
+          "description": "Set this attribute if you want to upgrade your instance with the Automated backup addon.     Please provide an empty object for the time being as value. There will be more configuration possible     in the future."
+        },
+        "extraStorage": {
+          "description": "Set this attribute if you want to upgrade your instance with the Extra Storage addon.",
+          "allOf": [
+            {
+              "$ref": "#/$defs/ExtraStorageRequest"
+            }
+          ]
+        },
+        "customImage": {
+          "type": "object",
+          "additionalProperties": true,
+          "description": "Set this attribute if you want to upgrade your instance with the Custom Images addon.   Please provide an empty object for the time being as value. There will be more configuration possible   in the future."
+        },
+        "addonsIds": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/AddOnRequest"
+          }
+        }
+      }
+    },
+    "ExtraStorageRequest": {
+      "type": "object",
+      "properties": {
+        "ssd": {
+          "description": "Specify the size in TB and the quantity",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "nvme": {
+          "description": "Specify the size in TB and the quantity",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

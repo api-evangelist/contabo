@@ -1,0 +1,568 @@
+{
+  "@context": {
+    "@vocab": "https://contabo.com/schema#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "contabo": "https://contabo.com/schema#",
+    "PaginationMeta": "contabo:PaginationMeta",
+    "size": {
+      "@id": "contabo:size",
+      "@type": "xsd:decimal"
+    },
+    "totalElements": {
+      "@id": "contabo:totalElements",
+      "@type": "xsd:decimal"
+    },
+    "totalPages": {
+      "@id": "contabo:totalPages",
+      "@type": "xsd:decimal"
+    },
+    "page": {
+      "@id": "contabo:page",
+      "@type": "xsd:decimal"
+    },
+    "TagResponse": "contabo:TagResponse",
+    "tenantId": {
+      "@id": "contabo:tenantId",
+      "@type": "xsd:string"
+    },
+    "customerId": {
+      "@id": "contabo:customerId",
+      "@type": "xsd:string"
+    },
+    "tagId": {
+      "@id": "contabo:tagId",
+      "@type": "xsd:integer"
+    },
+    "name": {
+      "@id": "contabo:name",
+      "@type": "xsd:string"
+    },
+    "color": {
+      "@id": "contabo:color",
+      "@type": "xsd:string"
+    },
+    "description": {
+      "@id": "contabo:description",
+      "@type": "xsd:string"
+    },
+    "Links": "contabo:Links",
+    "self": {
+      "@id": "contabo:self",
+      "@type": "xsd:string"
+    },
+    "first": {
+      "@id": "contabo:first",
+      "@type": "xsd:string"
+    },
+    "previous": {
+      "@id": "contabo:previous",
+      "@type": "xsd:string"
+    },
+    "next": {
+      "@id": "contabo:next",
+      "@type": "xsd:string"
+    },
+    "last": {
+      "@id": "contabo:last",
+      "@type": "xsd:string"
+    },
+    "ListTagResponse": "contabo:ListTagResponse",
+    "_pagination": {
+      "@id": "contabo:_pagination"
+    },
+    "data": {
+      "@id": "contabo:data",
+      "@container": "@list"
+    },
+    "_links": {
+      "@id": "contabo:_links"
+    },
+    "CreateTagRequest": "contabo:CreateTagRequest",
+    "CreateTagResponseData": "contabo:CreateTagResponseData",
+    "SelfLinks": "contabo:SelfLinks",
+    "CreateTagResponse": "contabo:CreateTagResponse",
+    "FindTagResponse": "contabo:FindTagResponse",
+    "UpdateTagRequest": "contabo:UpdateTagRequest",
+    "UpdateTagResponse": "contabo:UpdateTagResponse",
+    "AssignmentResponse": "contabo:AssignmentResponse",
+    "tagName": {
+      "@id": "contabo:tagName",
+      "@type": "xsd:string"
+    },
+    "resourceType": {
+      "@id": "contabo:resourceType",
+      "@type": "xsd:string"
+    },
+    "resourceId": {
+      "@id": "contabo:resourceId",
+      "@type": "xsd:string"
+    },
+    "resourceName": {
+      "@id": "contabo:resourceName",
+      "@type": "xsd:string"
+    },
+    "ListAssignmentResponse": "contabo:ListAssignmentResponse",
+    "TagAssignmentSelfLinks": "contabo:TagAssignmentSelfLinks",
+    "tag": {
+      "@id": "contabo:tag",
+      "@type": "xsd:string"
+    },
+    "_resource": {
+      "@id": "contabo:_resource",
+      "@type": "xsd:string"
+    },
+    "FindAssignmentResponse": "contabo:FindAssignmentResponse",
+    "CreateAssignmentResponse": "contabo:CreateAssignmentResponse",
+    "TagAuditResponse": "contabo:TagAuditResponse",
+    "id": {
+      "@id": "contabo:id",
+      "@type": "xsd:decimal"
+    },
+    "action": {
+      "@id": "contabo:action",
+      "@type": "xsd:string"
+    },
+    "timestamp": {
+      "@id": "contabo:timestamp",
+      "@type": "xsd:dateTime"
+    },
+    "changedBy": {
+      "@id": "contabo:changedBy",
+      "@type": "xsd:string"
+    },
+    "username": {
+      "@id": "contabo:username",
+      "@type": "xsd:string"
+    },
+    "requestId": {
+      "@id": "contabo:requestId",
+      "@type": "xsd:string"
+    },
+    "traceId": {
+      "@id": "contabo:traceId",
+      "@type": "xsd:string"
+    },
+    "changes": {
+      "@id": "contabo:changes"
+    },
+    "ListTagAuditsResponse": "contabo:ListTagAuditsResponse",
+    "AssignmentAuditResponse": "contabo:AssignmentAuditResponse",
+    "ListAssignmentAuditsResponse": "contabo:ListAssignmentAuditsResponse",
+    "PtrRecordResponse": "contabo:PtrRecordResponse",
+    "ip": {
+      "@id": "contabo:ip",
+      "@type": "xsd:string"
+    },
+    "ttl": {
+      "@id": "contabo:ttl",
+      "@type": "xsd:integer"
+    },
+    "ptr": {
+      "@id": "contabo:ptr",
+      "@type": "xsd:string"
+    },
+    "ApiPtrRecordResponse": "contabo:ApiPtrRecordResponse",
+    "UpdatePtrRecordRequest": "contabo:UpdatePtrRecordRequest",
+    "CreatePtrRecordRequest": "contabo:CreatePtrRecordRequest",
+    "ListPtrRecordsResponse": "contabo:ListPtrRecordsResponse",
+    "DnsZoneResponse": "contabo:DnsZoneResponse",
+    "zoneName": {
+      "@id": "contabo:zoneName",
+      "@type": "xsd:string"
+    },
+    "ListDnsZonesResponse": "contabo:ListDnsZonesResponse",
+    "DnsZoneRecordResponse": "contabo:DnsZoneRecordResponse",
+    "recordId": {
+      "@id": "contabo:recordId",
+      "@type": "xsd:decimal"
+    },
+    "type": {
+      "@id": "contabo:type",
+      "@type": "xsd:string"
+    },
+    "prio": {
+      "@id": "contabo:prio",
+      "@type": "xsd:decimal"
+    },
+    "port": {
+      "@id": "contabo:port",
+      "@type": "xsd:decimal"
+    },
+    "weight": {
+      "@id": "contabo:weight",
+      "@type": "xsd:decimal"
+    },
+    "flag": {
+      "@id": "contabo:flag",
+      "@type": "xsd:decimal"
+    },
+    "ListDnsZoneRecordsResponse": "contabo:ListDnsZoneRecordsResponse",
+    "CreateDnsZoneRequest": "contabo:CreateDnsZoneRequest",
+    "ApiDnsZoneResponse": "contabo:ApiDnsZoneResponse",
+    "CreateDnsZoneRecordRequest": "contabo:CreateDnsZoneRecordRequest",
+    "ApiDnsZoneRecordResponse": "contabo:ApiDnsZoneRecordResponse",
+    "UpdateDnsZoneRecordRequest": "contabo:UpdateDnsZoneRecordRequest",
+    "BulkDeleteDnsZoneRecordsRequest": "contabo:BulkDeleteDnsZoneRecordsRequest",
+    "recordIds": {
+      "@id": "contabo:recordIds",
+      "@container": "@list"
+    },
+    "BulkDeleteResultResponse": "contabo:BulkDeleteResultResponse",
+    "failedIds": {
+      "@id": "contabo:failedIds",
+      "@container": "@list"
+    },
+    "ApiBulkDeleteDnsZoneRecordsResponse": "contabo:ApiBulkDeleteDnsZoneRecordsResponse",
+    "ZoneAuditResponseData": "contabo:ZoneAuditResponseData",
+    "ZoneAuditResponse": "contabo:ZoneAuditResponse",
+    "RecordAuditResponseData": "contabo:RecordAuditResponseData",
+    "RecordAuditResponse": "contabo:RecordAuditResponse",
+    "IpV4": "contabo:IpV4",
+    "gateway": {
+      "@id": "contabo:gateway",
+      "@type": "xsd:string"
+    },
+    "netmaskCidr": {
+      "@id": "contabo:netmaskCidr",
+      "@type": "xsd:integer"
+    },
+    "broadcast": {
+      "@id": "contabo:broadcast",
+      "@type": "xsd:string"
+    },
+    "net": {
+      "@id": "contabo:net",
+      "@type": "xsd:string"
+    },
+    "ListVipResponseData": "contabo:ListVipResponseData",
+    "vipId": {
+      "@id": "contabo:vipId",
+      "@type": "xsd:string"
+    },
+    "dataCenter": {
+      "@id": "contabo:dataCenter",
+      "@type": "xsd:string"
+    },
+    "region": {
+      "@id": "contabo:region",
+      "@type": "xsd:string"
+    },
+    "resourceDisplayName": {
+      "@id": "contabo:resourceDisplayName",
+      "@type": "xsd:string"
+    },
+    "ipVersion": {
+      "@id": "contabo:ipVersion",
+      "@type": "xsd:string"
+    },
+    "v4": {
+      "@id": "contabo:v4",
+      "@type": "@id"
+    },
+    "ListVipResponse": "contabo:ListVipResponse",
+    "VipResponse": "contabo:VipResponse",
+    "FindVipResponse": "contabo:FindVipResponse",
+    "AssignVipResponse": "contabo:AssignVipResponse",
+    "VipAuditResponse": "contabo:VipAuditResponse",
+    "ListVipAuditResponse": "contabo:ListVipAuditResponse",
+    "SecretResponse": "contabo:SecretResponse",
+    "secretId": {
+      "@id": "contabo:secretId",
+      "@type": "xsd:decimal"
+    },
+    "value": {
+      "@id": "contabo:value",
+      "@type": "xsd:string"
+    },
+    "createdAt": {
+      "@id": "contabo:createdAt",
+      "@type": "xsd:dateTime"
+    },
+    "updatedAt": {
+      "@id": "contabo:updatedAt",
+      "@type": "xsd:dateTime"
+    },
+    "ListSecretResponse": "contabo:ListSecretResponse",
+    "CreateSecretRequest": "contabo:CreateSecretRequest",
+    "CreateSecretResponse": "contabo:CreateSecretResponse",
+    "FindSecretResponse": "contabo:FindSecretResponse",
+    "UpdateSecretRequest": "contabo:UpdateSecretRequest",
+    "UpdateSecretResponse": "contabo:UpdateSecretResponse",
+    "SecretAuditResponse": "contabo:SecretAuditResponse",
+    "ListSecretAuditResponse": "contabo:ListSecretAuditResponse",
+    "IpV41": "contabo:IpV41",
+    "PrivateIpConfig": "contabo:PrivateIpConfig",
+    "IpV6": "contabo:IpV6",
+    "IpConfig": "contabo:IpConfig",
+    "v6": {
+      "@id": "contabo:v6",
+      "@type": "@id"
+    },
+    "Instances": "contabo:Instances",
+    "instanceId": {
+      "@id": "contabo:instanceId",
+      "@type": "xsd:integer"
+    },
+    "displayName": {
+      "@id": "contabo:displayName",
+      "@type": "xsd:string"
+    },
+    "productId": {
+      "@id": "contabo:productId",
+      "@type": "xsd:string"
+    },
+    "privateIpConfig": {
+      "@id": "contabo:privateIpConfig",
+      "@type": "@id"
+    },
+    "ipConfig": {
+      "@id": "contabo:ipConfig",
+      "@type": "@id"
+    },
+    "status": {
+      "@id": "contabo:status",
+      "@type": "xsd:string"
+    },
+    "errorMessage": {
+      "@id": "contabo:errorMessage",
+      "@type": "xsd:string"
+    },
+    "ListPrivateNetworkResponseData": "contabo:ListPrivateNetworkResponseData",
+    "privateNetworkId": {
+      "@id": "contabo:privateNetworkId",
+      "@type": "xsd:integer"
+    },
+    "regionName": {
+      "@id": "contabo:regionName",
+      "@type": "xsd:string"
+    },
+    "cidr": {
+      "@id": "contabo:cidr",
+      "@type": "xsd:string"
+    },
+    "availableIps": {
+      "@id": "contabo:availableIps",
+      "@type": "xsd:integer"
+    },
+    "createdDate": {
+      "@id": "contabo:createdDate",
+      "@type": "xsd:dateTime"
+    },
+    "instances": {
+      "@id": "contabo:instances",
+      "@container": "@list"
+    },
+    "ListPrivateNetworkResponse": "contabo:ListPrivateNetworkResponse",
+    "CreatePrivateNetworkRequest": "contabo:CreatePrivateNetworkRequest",
+    "PrivateNetworkResponse": "contabo:PrivateNetworkResponse",
+    "CreatePrivateNetworkResponse": "contabo:CreatePrivateNetworkResponse",
+    "PatchPrivateNetworkRequest": "contabo:PatchPrivateNetworkRequest",
+    "PatchPrivateNetworkResponse": "contabo:PatchPrivateNetworkResponse",
+    "FindPrivateNetworkResponse": "contabo:FindPrivateNetworkResponse",
+    "InstanceAssignmentSelfLinks": "contabo:InstanceAssignmentSelfLinks",
+    "virtualPrivateCloud": {
+      "@id": "contabo:virtualPrivateCloud",
+      "@type": "xsd:string"
+    },
+    "instance": {
+      "@id": "contabo:instance",
+      "@type": "xsd:string"
+    },
+    "AssignInstancePrivateNetworkResponse": "contabo:AssignInstancePrivateNetworkResponse",
+    "UnassignInstancePrivateNetworkResponse": "contabo:UnassignInstancePrivateNetworkResponse",
+    "PrivateNetworkAuditResponse": "contabo:PrivateNetworkAuditResponse",
+    "ListPrivateNetworkAuditResponse": "contabo:ListPrivateNetworkAuditResponse",
+    "ResourcePermissionsResponse": "contabo:ResourcePermissionsResponse",
+    "PermissionResponse": "contabo:PermissionResponse",
+    "apiName": {
+      "@id": "contabo:apiName",
+      "@type": "xsd:string"
+    },
+    "actions": {
+      "@id": "contabo:actions",
+      "@container": "@list"
+    },
+    "resources": {
+      "@id": "contabo:resources",
+      "@container": "@list"
+    },
+    "RoleResponse": "contabo:RoleResponse",
+    "roleId": {
+      "@id": "contabo:roleId",
+      "@type": "xsd:integer"
+    },
+    "admin": {
+      "@id": "contabo:admin",
+      "@type": "xsd:boolean"
+    },
+    "accessAllResources": {
+      "@id": "contabo:accessAllResources",
+      "@type": "xsd:boolean"
+    },
+    "permissions": {
+      "@id": "contabo:permissions",
+      "@container": "@list"
+    },
+    "UserResponse": "contabo:UserResponse",
+    "userId": {
+      "@id": "contabo:userId",
+      "@type": "xsd:string"
+    },
+    "firstName": {
+      "@id": "contabo:firstName",
+      "@type": "xsd:string"
+    },
+    "lastName": {
+      "@id": "contabo:lastName",
+      "@type": "xsd:string"
+    },
+    "email": {
+      "@id": "contabo:email",
+      "@type": "xsd:string"
+    },
+    "emailVerified": {
+      "@id": "contabo:emailVerified",
+      "@type": "xsd:boolean"
+    },
+    "enabled": {
+      "@id": "contabo:enabled",
+      "@type": "xsd:boolean"
+    },
+    "totp": {
+      "@id": "contabo:totp",
+      "@type": "xsd:boolean"
+    },
+    "locale": {
+      "@id": "contabo:locale",
+      "@type": "xsd:string"
+    },
+    "roles": {
+      "@id": "contabo:roles",
+      "@container": "@list"
+    },
+    "owner": {
+      "@id": "contabo:owner",
+      "@type": "xsd:boolean"
+    },
+    "sendInvoiceEmail": {
+      "@id": "contabo:sendInvoiceEmail",
+      "@type": "xsd:boolean"
+    },
+    "ListUserResponse": "contabo:ListUserResponse",
+    "CreateUserRequest": "contabo:CreateUserRequest",
+    "CreateUserResponseData": "contabo:CreateUserResponseData",
+    "CreateUserResponse": "contabo:CreateUserResponse",
+    "FindUserResponse": "contabo:FindUserResponse",
+    "UpdateUserRequest": "contabo:UpdateUserRequest",
+    "UpdateUserResponse": "contabo:UpdateUserResponse",
+    "SsoTokenResponse": "contabo:SsoTokenResponse",
+    "ssoToken": {
+      "@id": "contabo:ssoToken",
+      "@type": "xsd:string"
+    },
+    "url": {
+      "@id": "contabo:url",
+      "@type": "xsd:string"
+    },
+    "FindSsoTokenResponse": "contabo:FindSsoTokenResponse",
+    "ClientResponse": "contabo:ClientResponse",
+    "clientId": {
+      "@id": "contabo:clientId",
+      "@type": "xsd:string"
+    },
+    "secret": {
+      "@id": "contabo:secret",
+      "@type": "xsd:string"
+    },
+    "FindClientResponse": "contabo:FindClientResponse",
+    "ClientSecretResponse": "contabo:ClientSecretResponse",
+    "GenerateClientSecretResponse": "contabo:GenerateClientSecretResponse",
+    "UserIsPasswordSetResponse": "contabo:UserIsPasswordSetResponse",
+    "isPasswordSet": {
+      "@id": "contabo:isPasswordSet",
+      "@type": "xsd:boolean"
+    },
+    "FindUserIsPasswordSetResponse": "contabo:FindUserIsPasswordSetResponse",
+    "UserSwitchAccountRequest": "contabo:UserSwitchAccountRequest",
+    "UserSwitchAccountTokens": "contabo:UserSwitchAccountTokens",
+    "token": {
+      "@id": "contabo:token",
+      "@type": "xsd:string"
+    },
+    "refreshToken": {
+      "@id": "contabo:refreshToken",
+      "@type": "xsd:string"
+    },
+    "UserSwitchAccountResponse": "contabo:UserSwitchAccountResponse",
+    "UserSwitchAccountDefaultRequest": "contabo:UserSwitchAccountDefaultRequest",
+    "default": {
+      "@id": "contabo:default",
+      "@type": "xsd:boolean"
+    },
+    "AccountDetails": "contabo:AccountDetails",
+    "company": {
+      "@id": "contabo:company",
+      "@type": "xsd:string"
+    },
+    "UserSwitchAccount": "contabo:UserSwitchAccount",
+    "roleName": {
+      "@id": "contabo:roleName",
+      "@type": "xsd:string"
+    },
+    "accountDetails": {
+      "@id": "contabo:accountDetails"
+    },
+    "UserSwitchAccountDefaultResponse": "contabo:UserSwitchAccountDefaultResponse",
+    "ListUserSwitchAccountsResponse": "contabo:ListUserSwitchAccountsResponse",
+    "ListRoleResponse": "contabo:ListRoleResponse",
+    "PermissionRequest": "contabo:PermissionRequest",
+    "CreateRoleRequest": "contabo:CreateRoleRequest",
+    "CreateRoleResponseData": "contabo:CreateRoleResponseData",
+    "CreateRoleResponse": "contabo:CreateRoleResponse",
+    "FindRoleResponse": "contabo:FindRoleResponse",
+    "UpdateRoleRequest": "contabo:UpdateRoleRequest",
+    "UpdateRoleResponse": "contabo:UpdateRoleResponse",
+    "ApiPermissionsResponse": "contabo:ApiPermissionsResponse",
+    "ListApiPermissionResponse": "contabo:ListApiPermissionResponse",
+    "CredentialData": "contabo:CredentialData",
+    "accessKey": {
+      "@id": "contabo:accessKey",
+      "@type": "xsd:string"
+    },
+    "secretKey": {
+      "@id": "contabo:secretKey",
+      "@type": "xsd:string"
+    },
+    "objectStorageId": {
+      "@id": "contabo:objectStorageId",
+      "@type": "xsd:string"
+    },
+    "credentialId": {
+      "@id": "contabo:credentialId",
+      "@type": "xsd:decimal"
+    },
+    "ListCredentialResponse": "contabo:ListCredentialResponse",
+    "FindCredentialResponse": "contabo:FindCredentialResponse",
+    "SupportSignatureResponse": "contabo:SupportSignatureResponse",
+    "validity": {
+      "@id": "contabo:validity",
+      "@type": "xsd:decimal"
+    },
+    "system": {
+      "@id": "contabo:system",
+      "@type": "xsd:string"
+    },
+    "FindSupportSignatureResponse": "contabo:FindSupportSignatureResponse",
+    "UserAuditResponse": "contabo:UserAuditResponse",
+    "ListUserAuditResponse": "contabo:ListUserAuditResponse"
+  },
+  "@type": "schema:Dataset",
+  "schema:name": "Contabo API JSON-LD context",
+  "schema:description": "A JSON-LD @context for the objects Contabo's own API contract declares: one class per component schema, one property per declared field, typed from the contract. Derived by script (derive-json-ld.py, 2026-10-13) from openapi/contabo-openapi.yml.",
+  "dcterms:created": "2026-10-13",
+  "dcterms:source": [
+    "openapi/contabo-openapi.yml"
+  ]
+}

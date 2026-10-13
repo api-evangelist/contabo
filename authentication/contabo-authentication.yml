@@ -1,0 +1,20 @@
+generated: '2026-10-13'
+method: derived
+source: openapi/contabo-openapi.yml
+summary:
+  types:
+  - http
+schemes:
+- name: bearer
+  type: http
+  scheme: bearer
+  bearerFormat: JWT
+  description: |-
+    The Contabo API requires a so called `access_token` which has to be provided in the HTTP request `Authorization` header. The special type is called `Bearer`.
+
+    Thus the header would look like `Authorization: Bearer <access_token>`
+
+    In order to get an `access_token` you need to invoke Contabo's OAuth2 provider with the credentials you get from the [Customer Control Panel](https://my.contabo.com).
+    Yo
+  sources:
+  - openapi/contabo-openapi.yml

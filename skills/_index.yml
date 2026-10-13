@@ -1,0 +1,6 @@
+generated: '2026-10-13'
+method: generated
+source: openapi/contabo-openapi.yml
+skills:
+- file: contabo-manage-instance-lifecycle.md
+- file: contabo-snapshot-and-rollback.md

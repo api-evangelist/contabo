@@ -1,0 +1,464 @@
+generated: '2026-10-13'
+method: derived
+generator: derive-vocabulary.py
+source: openapi/contabo-openapi.yml
+vocabulary:
+  name: Contabo Domain Vocabulary
+  description: 'Terms declared by Contabo''s own API contract: its resource groups, objects and enumerations, with the contract''s definitions.
+    Derived, not authored.'
+  version: '2026-10-13'
+  terms:
+  - term: Instances
+    definition: The Compute Management API allows you to manage compute resources (e.g. creation, deletion, starting, stopping) as well as managing
+      snapshots and custom images. It also supports [cloud-init](https://cloud-init.io/) at least on our default images (for custom images you'll
+      need to provide cloud-init support packages). The API offers providing [cloud-init](https://cloud-init.io/) scripts via the `use
+    tags:
+    - Resource Group
+    source: openapi/contabo-openapi.yml
+  - term: Instances Audits
+    definition: The Compute Management API allows you to manage compute resources (e.g. creation, deletion, starting, stopping) as well as managing
+      snapshots and custom images. It also supports [cloud-init](https://cloud-init.io/) at least on our default images (for custom images you'll
+      need to provide cloud-init support packages). The API offers providing [cloud-init](https://cloud-init.io/) scripts via the `use
+    tags:
+    - Resource Group
+    source: openapi/contabo-openapi.yml
+  - term: Instance Actions
+    definition: The Compute Management API allows you to manage compute resources (e.g. creation, deletion, starting, stopping) as well as managing
+      snapshots and custom images. It also supports [cloud-init](https://cloud-init.io/) at least on our default images (for custom images you'll
+      need to provide cloud-init support packages). The API offers providing [cloud-init](https://cloud-init.io/) scripts via the `use
+    tags:
+    - Resource Group
+    source: openapi/contabo-openapi.yml
+  - term: Instance Actions Audits
+    definition: The Compute Management API allows you to manage compute resources (e.g. creation, deletion, starting, stopping) as well as managing
+      snapshots and custom images. It also supports [cloud-init](https://cloud-init.io/) at least on our default images (for custom images you'll
+      need to provide cloud-init support packages). The API offers providing [cloud-init](https://cloud-init.io/) scripts via the `use
+    tags:
+    - Resource Group
+    source: openapi/contabo-openapi.yml
+  - term: Images
+    definition: The Compute Management API allows you to manage compute resources (e.g. creation, deletion, starting, stopping) as well as managing
+      snapshots and custom images. It also supports [cloud-init](https://cloud-init.io/) at least on our default images (for custom images you'll
+      need to provide cloud-init support packages). The API offers providing [cloud-init](https://cloud-init.io/) scripts via the `use
+    tags:
+    - Resource Group
+    source: openapi/contabo-openapi.yml
+  - term: Images Audits
+    definition: The Compute Management API allows you to manage compute resources (e.g. creation, deletion, starting, stopping) as well as managing
+      snapshots and custom images. It also supports [cloud-init](https://cloud-init.io/) at least on our default images (for custom images you'll
+      need to provide cloud-init support packages). The API offers providing [cloud-init](https://cloud-init.io/) scripts via the `use
+    tags:
+    - Resource Group
+    source: openapi/contabo-openapi.yml
+  - term: Object Storages
+    definition: Manage S3 compatible Object Storage. With the Object Storage API you can create Object Storage in different locations. Please
+      note that you can only have one Object Storage per location. Furthermore you can increase the amount of storage space and control the autoscaling
+      feature which allows to automatically perform a monthly upgrade of the disk space to the specified maximum. You might also inspe
+    tags:
+    - Resource Group
+    source: openapi/contabo-openapi.yml
+  - term: Object Storages Audits
+    definition: Manage S3 compatible Object Storage. With the Object Storage API you can create Object Storage in different locations. Please
+      note that you can only have one Object Storage per location. Furthermore you can increase the amount of storage space and control the autoscaling
+      feature which allows to automatically perform a monthly upgrade of the disk space to the specified maximum. You might also inspe
+    tags:
+    - Resource Group
+    source: openapi/contabo-openapi.yml
+  - term: Private Networks
+    definition: Private Networking API allows you to create and manage Private Networks / Virtual Private Vloud (VPC) for your instances (Cloud
+      VPS/VDS). Private Network / VPC allows private and direct communication between instances using private IPs. Traffic doesn't leave a Data
+      Center. This feature requires a payed add-on for each instance being part of a Private Network. Instance can be part of multiple Priva
+    tags:
+    - Resource Group
+    source: openapi/contabo-openapi.yml
+  - term: Private Networks Audits
+    definition: Private Networking API allows you to create and manage Private Networks / Virtual Private Vloud (VPC) for your instances (Cloud
+      VPS/VDS). Private Network / VPC allows private and direct communication between instances using private IPs. Traffic doesn't leave a Data
+      Center. This feature requires a payed add-on for each instance being part of a Private Network. Instance can be part of multiple Priva
+    tags:
+    - Resource Group
+    source: openapi/contabo-openapi.yml
+  - term: Tags
+    definition: Tags are Customer-defined labels which can be attached to any resource in your account. Tag API represent simple CRUD functions
+      and allow you to manage your tags. Use tags to group your resources. For example you can define some user group with tag and give them permission
+      to create compute instances.
+    tags:
+    - Resource Group
+    source: openapi/contabo-openapi.yml
+  - term: Tags Audits
+    definition: Tags are Customer-defined labels which can be attached to any resource in your account. Tag API represent simple CRUD functions
+      and allow you to manage your tags. Use tags to group your resources. For example you can define some user group with tag and give them permission
+      to create compute instances.
+    tags:
+    - Resource Group
+    source: openapi/contabo-openapi.yml
+  - term: Tag Assignments
+    definition: Tags are Customer-defined labels which can be attached to any resource in your account. Tag API represent simple CRUD functions
+      and allow you to manage your tags. Use tags to group your resources. For example you can define some user group with tag and give them permission
+      to create compute instances.
+    tags:
+    - Resource Group
+    source: openapi/contabo-openapi.yml
+  - term: Tag Assignments Audits
+    definition: Tags are Customer-defined labels which can be attached to any resource in your account. Tag API represent simple CRUD functions
+      and allow you to manage your tags. Use tags to group your resources. For example you can define some user group with tag and give them permission
+      to create compute instances.
+    tags:
+    - Resource Group
+    source: openapi/contabo-openapi.yml
+  - term: Users
+    definition: Give access to all api endpoints and resources or manage to which endpoints and resources individual users might have access to.
+      Permissions are organized in roles. Users can have roles assigned. Roles can grant and restrict access to different API's or to specific
+      resources. Permissions for resources are declared by using tags which have been assigned to resources.
+    tags:
+    - Resource Group
+    source: openapi/contabo-openapi.yml
+  - term: User Accounts
+    definition: Give access to all api endpoints and resources or manage to which endpoints and resources individual users might have access to.
+      Permissions are organized in roles. Users can have roles assigned. Roles can grant and restrict access to different API's or to specific
+      resources. Permissions for resources are declared by using tags which have been assigned to resources.
+    tags:
+    - Resource Group
+    source: openapi/contabo-openapi.yml
+  - term: Users Object Storage Credentials
+    definition: Give access to all api endpoints and resources or manage to which endpoints and resources individual users might have access to.
+      Permissions are organized in roles. Users can have roles assigned. Roles can grant and restrict access to different API's or to specific
+      resources. Permissions for resources are declared by using tags which have been assigned to resources.
+    tags:
+    - Resource Group
+    source: openapi/contabo-openapi.yml
+  - term: Users Audits
+    definition: Give access to all api endpoints and resources or manage to which endpoints and resources individual users might have access to.
+      Permissions are organized in roles. Users can have roles assigned. Roles can grant and restrict access to different API's or to specific
+      resources. Permissions for resources are declared by using tags which have been assigned to resources.
+    tags:
+    - Resource Group
+    source: openapi/contabo-openapi.yml
+  - term: Roles
+    definition: Give access to all api endpoints and resources or manage to which endpoints and resources individual users might have access to.
+      Permissions are organized in roles. Users can have roles assigned. Roles can grant and restrict access to different API's or to specific
+      resources. Permissions for resources are declared by using tags which have been assigned to resources.
+    tags:
+    - Resource Group
+    source: openapi/contabo-openapi.yml
+  - term: Roles Audits
+    definition: Give access to all api endpoints and resources or manage to which endpoints and resources individual users might have access to.
+      Permissions are organized in roles. Users can have roles assigned. Roles can grant and restrict access to different API's or to specific
+      resources. Permissions for resources are declared by using tags which have been assigned to resources.
+    tags:
+    - Resource Group
+    source: openapi/contabo-openapi.yml
+  - term: Secrets
+    definition: The Secret Management API allows you to store and manage your passwords and ssh-keys. Usage of the Secret Management API is purely
+      optional. As a convenience feature e.g. it allows you to reuse SSH-keys easily.
+    tags:
+    - Resource Group
+    source: openapi/contabo-openapi.yml
+  - term: Secrets Audits
+    definition: The Secret Management API allows you to store and manage your passwords and ssh-keys. Usage of the Secret Management API is purely
+      optional. As a convenience feature e.g. it allows you to reuse SSH-keys easily.
+    tags:
+    - Resource Group
+    source: openapi/contabo-openapi.yml
+  - term: VIP
+    definition: VIP (Virtual IPs) API manages virtual IP adresses including ´additional´ and ´floating´ IPv4 Adresses. Virtual IPs are payed add-ons
+      (Additional IP) which can be freely assigned to Cloud VPS/VDS or Bare Metal. Please note, that assgnments of virtual IPs to servers is only
+      for documentation purposes. Technical Assignemts must be configured on operation system level, see [docs](https://docs.contabo.
+    tags:
+    - Resource Group
+    source: openapi/contabo-openapi.yml
+  - term: Domains
+    definition: Domains API allows you to create and manage Domains.
+    tags:
+    - Resource Group
+    source: openapi/contabo-openapi.yml
+  - term: Handles
+    definition: Domains API allows you to create and manage Domains.
+    tags:
+    - Resource Group
+    source: openapi/contabo-openapi.yml
+  - term: DNS
+    definition: DNS API allows you to create and manage dns for your instances (Cloud VPS/VDS).
+    tags:
+    - Resource Group
+    source: openapi/contabo-openapi.yml
+  - term: DNS Audits
+    definition: DNS API allows you to create and manage dns for your instances (Cloud VPS/VDS).
+    tags:
+    - Resource Group
+    source: openapi/contabo-openapi.yml
+  - term: Firewalls
+    definition: Firewall API allows you to create and manage firewalls for your instances (Cloud VPS/VDS). Each instance protected by customizable
+      inbound firewall rules requires a paid firewall add-on. Rules allow inbound traffic based on protocols (TCP, UDP, ICMP), ports and sources
+      (IPs or nets).
+    tags:
+    - Resource Group
+    source: openapi/contabo-openapi.yml
+  - term: PaginationMeta
+    definition: 'Object declared by the contract with fields: size, totalElements, totalPages, page.'
+    tags:
+    - Object
+    source: openapi/contabo-openapi.yml#/components/schemas/PaginationMeta
+  - term: TagResponse
+    definition: 'Object declared by the contract with fields: tenantId, customerId, tagId, name, color, description.'
+    tags:
+    - Object
+    source: openapi/contabo-openapi.yml#/components/schemas/TagResponse
+  - term: Links
+    definition: 'Object declared by the contract with fields: self, first, previous, next, last.'
+    tags:
+    - Object
+    source: openapi/contabo-openapi.yml#/components/schemas/Links
+  - term: ListTagResponse
+    definition: 'Object declared by the contract with fields: _pagination, data, _links.'
+    tags:
+    - Object
+    source: openapi/contabo-openapi.yml#/components/schemas/ListTagResponse
+  - term: CreateTagRequest
+    definition: 'Object declared by the contract with fields: name, color, description.'
+    tags:
+    - Object
+    source: openapi/contabo-openapi.yml#/components/schemas/CreateTagRequest
+  - term: CreateTagResponseData
+    definition: 'Object declared by the contract with fields: tenantId, customerId, tagId.'
+    tags:
+    - Object
+    source: openapi/contabo-openapi.yml#/components/schemas/CreateTagResponseData
+  - term: SelfLinks
+    definition: 'Object declared by the contract with fields: self.'
+    tags:
+    - Object
+    source: openapi/contabo-openapi.yml#/components/schemas/SelfLinks
+  - term: CreateTagResponse
+    definition: 'Object declared by the contract with fields: data, _links.'
+    tags:
+    - Object
+    source: openapi/contabo-openapi.yml#/components/schemas/CreateTagResponse
+  - term: FindTagResponse
+    definition: 'Object declared by the contract with fields: data, _links.'
+    tags:
+    - Object
+    source: openapi/contabo-openapi.yml#/components/schemas/FindTagResponse
+  - term: UpdateTagRequest
+    definition: 'Object declared by the contract with fields: name, color, description.'
+    tags:
+    - Object
+    source: openapi/contabo-openapi.yml#/components/schemas/UpdateTagRequest
+  - term: UpdateTagResponse
+    definition: 'Object declared by the contract with fields: _links.'
+    tags:
+    - Object
+    source: openapi/contabo-openapi.yml#/components/schemas/UpdateTagResponse
+  - term: AssignmentResponse
+    definition: 'Object declared by the contract with fields: tenantId, customerId, tagId, tagName, resourceType, resourceId, resourceName.'
+    tags:
+    - Object
+    source: openapi/contabo-openapi.yml#/components/schemas/AssignmentResponse
+  - term: ListAssignmentResponse
+    definition: 'Object declared by the contract with fields: _pagination, data, _links.'
+    tags:
+    - Object
+    source: openapi/contabo-openapi.yml#/components/schemas/ListAssignmentResponse
+  - term: TagAssignmentSelfLinks
+    definition: 'Object declared by the contract with fields: self, tag, _resource.'
+    tags:
+    - Object
+    source: openapi/contabo-openapi.yml#/components/schemas/TagAssignmentSelfLinks
+  - term: FindAssignmentResponse
+    definition: 'Object declared by the contract with fields: data, _links.'
+    tags:
+    - Object
+    source: openapi/contabo-openapi.yml#/components/schemas/FindAssignmentResponse
+  - term: CreateAssignmentResponse
+    definition: 'Object declared by the contract with fields: _links.'
+    tags:
+    - Object
+    source: openapi/contabo-openapi.yml#/components/schemas/CreateAssignmentResponse
+  - term: TagAuditResponse
+    definition: 'Object declared by the contract with fields: tenantId, customerId, id, tagId, action, timestamp, changedBy, username, requestId,
+      traceId, changes.'
+    tags:
+    - Object
+    source: openapi/contabo-openapi.yml#/components/schemas/TagAuditResponse
+  - term: ListTagAuditsResponse
+    definition: 'Object declared by the contract with fields: _pagination, data, _links.'
+    tags:
+    - Object
+    source: openapi/contabo-openapi.yml#/components/schemas/ListTagAuditsResponse
+  - term: AssignmentAuditResponse
+    definition: 'Object declared by the contract with fields: tenantId, customerId, id, resourceId, resourceType, tagId, action, timestamp, changedBy,
+      username, requestId, traceId. (1 more)'
+    tags:
+    - Object
+    source: openapi/contabo-openapi.yml#/components/schemas/AssignmentAuditResponse
+  - term: ListAssignmentAuditsResponse
+    definition: 'Object declared by the contract with fields: _pagination, data, _links.'
+    tags:
+    - Object
+    source: openapi/contabo-openapi.yml#/components/schemas/ListAssignmentAuditsResponse
+  - term: PtrRecordResponse
+    definition: 'Object declared by the contract with fields: tenantId, customerId, ip, ttl, ptr.'
+    tags:
+    - Object
+    source: openapi/contabo-openapi.yml#/components/schemas/PtrRecordResponse
+  - term: ApiPtrRecordResponse
+    definition: 'Object declared by the contract with fields: data, _links.'
+    tags:
+    - Object
+    source: openapi/contabo-openapi.yml#/components/schemas/ApiPtrRecordResponse
+  - term: UpdatePtrRecordRequest
+    definition: 'Object declared by the contract with fields: ptr.'
+    tags:
+    - Object
+    source: openapi/contabo-openapi.yml#/components/schemas/UpdatePtrRecordRequest
+  - term: CreatePtrRecordRequest
+    definition: 'Object declared by the contract with fields: ptr, ip, ttl.'
+    tags:
+    - Object
+    source: openapi/contabo-openapi.yml#/components/schemas/CreatePtrRecordRequest
+  - term: ListPtrRecordsResponse
+    definition: 'Object declared by the contract with fields: _pagination, data, _links.'
+    tags:
+    - Object
+    source: openapi/contabo-openapi.yml#/components/schemas/ListPtrRecordsResponse
+  - term: DnsZoneResponse
+    definition: 'Object declared by the contract with fields: tenantId, customerId, zoneName.'
+    tags:
+    - Object
+    source: openapi/contabo-openapi.yml#/components/schemas/DnsZoneResponse
+  - term: ListDnsZonesResponse
+    definition: 'Object declared by the contract with fields: _pagination, data, _links.'
+    tags:
+    - Object
+    source: openapi/contabo-openapi.yml#/components/schemas/ListDnsZonesResponse
+  - term: DnsZoneRecordResponse
+    definition: 'Object declared by the contract with fields: tenantId, customerId, recordId, name, type, ttl, prio, data, port, weight, flag,
+      tag.'
+    tags:
+    - Object
+    source: openapi/contabo-openapi.yml#/components/schemas/DnsZoneRecordResponse
+  - term: ListDnsZoneRecordsResponse
+    definition: 'Object declared by the contract with fields: _pagination, data, _links.'
+    tags:
+    - Object
+    source: openapi/contabo-openapi.yml#/components/schemas/ListDnsZoneRecordsResponse
+  - term: CreateDnsZoneRequest
+    definition: 'Object declared by the contract with fields: zoneName.'
+    tags:
+    - Object
+    source: openapi/contabo-openapi.yml#/components/schemas/CreateDnsZoneRequest
+  - term: ApiDnsZoneResponse
+    definition: 'Object declared by the contract with fields: data, _links.'
+    tags:
+    - Object
+    source: openapi/contabo-openapi.yml#/components/schemas/ApiDnsZoneResponse
+  - term: CreateDnsZoneRecordRequest
+    definition: 'Object declared by the contract with fields: name, type, ttl, prio, data, port, weight, flag, tag.'
+    tags:
+    - Object
+    source: openapi/contabo-openapi.yml#/components/schemas/CreateDnsZoneRecordRequest
+  - term: ApiDnsZoneRecordResponse
+    definition: 'Object declared by the contract with fields: data, _links.'
+    tags:
+    - Object
+    source: openapi/contabo-openapi.yml#/components/schemas/ApiDnsZoneRecordResponse
+  - term: UpdateDnsZoneRecordRequest
+    definition: 'Object declared by the contract with fields: ttl, prio, type, data, port, weight, flag, tag.'
+    tags:
+    - Object
+    source: openapi/contabo-openapi.yml#/components/schemas/UpdateDnsZoneRecordRequest
+  - term: BulkDeleteDnsZoneRecordsRequest
+    definition: 'Object declared by the contract with fields: recordIds.'
+    tags:
+    - Object
+    source: openapi/contabo-openapi.yml#/components/schemas/BulkDeleteDnsZoneRecordsRequest
+  - term: BulkDeleteResultResponse
+    definition: 'Object declared by the contract with fields: tenantId, customerId, failedIds.'
+    tags:
+    - Object
+    source: openapi/contabo-openapi.yml#/components/schemas/BulkDeleteResultResponse
+  - term: ApiBulkDeleteDnsZoneRecordsResponse
+    definition: 'Object declared by the contract with fields: data, _links.'
+    tags:
+    - Object
+    source: openapi/contabo-openapi.yml#/components/schemas/ApiBulkDeleteDnsZoneRecordsResponse
+  - term: ZoneAuditResponseData
+    definition: 'Object declared by the contract with fields: id, action, timestamp, tenantId, customerId, changedBy, username, requestId, traceId,
+      name, changes.'
+    tags:
+    - Object
+    source: openapi/contabo-openapi.yml#/components/schemas/ZoneAuditResponseData
+  - term: ZoneAuditResponse
+    definition: 'Object declared by the contract with fields: _pagination, data, _links.'
+    tags:
+    - Object
+    source: openapi/contabo-openapi.yml#/components/schemas/ZoneAuditResponse
+  - term: RecordAuditResponseData
+    definition: 'Object declared by the contract with fields: id, action, timestamp, tenantId, customerId, changedBy, username, requestId, traceId,
+      recordId, zoneName, changes.'
+    tags:
+    - Object
+    source: openapi/contabo-openapi.yml#/components/schemas/RecordAuditResponseData
+  - term: RecordAuditResponse
+    definition: 'Object declared by the contract with fields: _pagination, data, _links.'
+    tags:
+    - Object
+    source: openapi/contabo-openapi.yml#/components/schemas/RecordAuditResponse
+  - term: IpV4
+    definition: 'Object declared by the contract with fields: ip, gateway, netmaskCidr, broadcast, net.'
+    tags:
+    - Object
+    source: openapi/contabo-openapi.yml#/components/schemas/IpV4
+  - term: ListVipResponseData
+    definition: 'Object declared by the contract with fields: tenantId, customerId, vipId, dataCenter, region, resourceId, resourceType, resourceName,
+      resourceDisplayName, ipVersion, type, v4.'
+    tags:
+    - Object
+    source: openapi/contabo-openapi.yml#/components/schemas/ListVipResponseData
+  - term: ListVipResponse
+    definition: 'Object declared by the contract with fields: _pagination, data, _links.'
+    tags:
+    - Object
+    source: openapi/contabo-openapi.yml#/components/schemas/ListVipResponse
+  - term: VipResponse
+    definition: 'Object declared by the contract with fields: tenantId, customerId, vipId, dataCenter, region, resourceId, resourceType, resourceName,
+      resourceDisplayName, ipVersion, type, v4.'
+    tags:
+    - Object
+    source: openapi/contabo-openapi.yml#/components/schemas/VipResponse
+  - term: FindVipResponse
+    definition: 'Object declared by the contract with fields: data, _links.'
+    tags:
+    - Object
+    source: openapi/contabo-openapi.yml#/components/schemas/FindVipResponse
+  - term: AssignVipResponse
+    definition: 'Object declared by the contract with fields: data, _links.'
+    tags:
+    - Object
+    source: openapi/contabo-openapi.yml#/components/schemas/AssignVipResponse
+  - term: VipAuditResponse
+    definition: 'Object declared by the contract with fields: id, vipId, action, timestamp, tenantId, customerId, changedBy, username, requestId,
+      traceId, changes.'
+    tags:
+    - Object
+    source: openapi/contabo-openapi.yml#/components/schemas/VipAuditResponse
+  - term: ListVipAuditResponse
+    definition: 'Object declared by the contract with fields: _pagination, data, _links.'
+    tags:
+    - Object
+    source: openapi/contabo-openapi.yml#/components/schemas/ListVipAuditResponse
+  - term: SecretResponse
+    definition: 'Object declared by the contract with fields: tenantId, customerId, secretId, name, type, value, createdAt, updatedAt.'
+    tags:
+    - Object
+    source: openapi/contabo-openapi.yml#/components/schemas/SecretResponse
+  - term: ListSecretResponse
+    definition: 'Object declared by the contract with fields: _pagination, data, _links.'
+    tags:
+    - Object
+    source: openapi/contabo-openapi.yml#/components/schemas/ListSecretResponse
+  - term: CreateSecretRequest
+    definition: 'Object declared by the contract with fields: name, value, type.'
+    tags:
+    - Object
+    source: openapi/contabo-openapi.yml#/components/schemas/CreateSecretRequest

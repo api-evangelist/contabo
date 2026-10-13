@@ -1,0 +1,215 @@
+generated: '2026-10-13'
+method: derived
+generator: derive-mcp-candidate.py
+source:
+- openapi/contabo-openapi.yml
+status: candidate
+deployment:
+  mode: none
+  auth: unknown
+  verified: probed
+note: 'No MCP server was found. The pre-flight posted tools/list to /mcp on contabo.com, api.contabo.com, docs.contabo.com, help.contabo.com;
+  verdict opaque (https://api.contabo.com/mcp answered 403: the edge authenticates before it routes, which proves nothing either way). Candidate
+  tools below are derived from the 157 operation(s) in the provider''s own OpenAPI (40 listed); they describe what a server WOULD expose, not
+  one that exists.'
+tools:
+- name: retrieve_tag_list
+  operationId: retrieveTagList
+  method: GET
+  path: /v1/tags
+  description: List tags
+- name: create_tag
+  operationId: createTag
+  method: POST
+  path: /v1/tags
+  description: Create a new tag
+- name: retrieve_tag
+  operationId: retrieveTag
+  method: GET
+  path: /v1/tags/{tagId}
+  description: Get specific tag by id
+- name: update_tag
+  operationId: updateTag
+  method: PATCH
+  path: /v1/tags/{tagId}
+  description: Update specific tag by id
+- name: delete_tag
+  operationId: deleteTag
+  method: DELETE
+  path: /v1/tags/{tagId}
+  description: Delete existing tag by id
+- name: retrieve_assignment_list
+  operationId: retrieveAssignmentList
+  method: GET
+  path: /v1/tags/{tagId}/assignments
+  description: List tag assignments
+- name: retrieve_assignment
+  operationId: retrieveAssignment
+  method: GET
+  path: /v1/tags/{tagId}/assignments/{resourceType}/{resourceId}
+  description: Get specific assignment for the tag
+- name: create_assignment
+  operationId: createAssignment
+  method: POST
+  path: /v1/tags/{tagId}/assignments/{resourceType}/{resourceId}
+  description: Create a new assignment for the tag
+- name: delete_assignment
+  operationId: deleteAssignment
+  method: DELETE
+  path: /v1/tags/{tagId}/assignments/{resourceType}/{resourceId}
+  description: Delete existing tag assignment
+- name: retrieve_tag_audits_list
+  operationId: retrieveTagAuditsList
+  method: GET
+  path: /v1/tags/audits
+  description: List history about your assignments (audit)
+- name: retrieve_assignments_audits_list
+  operationId: retrieveAssignmentsAuditsList
+  method: GET
+  path: /v1/tags/assignments/audits
+  description: List history about your assignments (audit)
+- name: retrieve_ptr_record
+  operationId: retrievePtrRecord
+  method: GET
+  path: /v1/dns/ptrs/{ipAddress}
+  description: Retrieve a PTR Record by ip address
+- name: update_ptr_record
+  operationId: updatePtrRecord
+  method: PUT
+  path: /v1/dns/ptrs/{ipAddress}
+  description: Edit a PTR Record by ip address
+- name: delete_ptr_record
+  operationId: deletePtrRecord
+  method: DELETE
+  path: /v1/dns/ptrs/{ipAddress}
+  description: Delete a PTR Record using ip address
+- name: create_ptr_record
+  operationId: createPtrRecord
+  method: POST
+  path: /v1/dns/ptrs
+  description: Create a new PTR Record using ip address
+- name: retrieve_ptr_records_list
+  operationId: retrievePtrRecordsList
+  method: GET
+  path: /v1/dns/ptrs
+  description: List PTR records
+- name: retrieve_dns_zones_list
+  operationId: retrieveDnsZonesList
+  method: GET
+  path: /v1/dns/zones
+  description: List DNS zones
+- name: create_dns_zone
+  operationId: createDnsZone
+  method: POST
+  path: /v1/dns/zones
+  description: Create DNS zone
+- name: retrieve_dns_zone
+  operationId: retrieveDnsZone
+  method: GET
+  path: /v1/dns/zones/{zoneName}
+  description: Retrieve a DNS Zone by zone name
+- name: delete_dns_zone
+  operationId: deleteDnsZone
+  method: DELETE
+  path: /v1/dns/zones/{zoneName}
+  description: Delete a DNS zone.
+- name: retrieve_dns_zone_records_list
+  operationId: retrieveDnsZoneRecordsList
+  method: GET
+  path: /v1/dns/zones/{zoneName}/records
+  description: List a DNS Zone's records
+- name: create_dns_zone_record
+  operationId: createDnsZoneRecord
+  method: POST
+  path: /v1/dns/zones/{zoneName}/records
+  description: Create DNS zone record
+- name: update_dns_zone_record
+  operationId: updateDnsZoneRecord
+  method: PATCH
+  path: /v1/dns/zones/{zoneName}/records/{recordId}
+  description: Update DNS zone record
+- name: delete_dns_zone_record
+  operationId: deleteDnsZoneRecord
+  method: DELETE
+  path: /v1/dns/zones/{zoneName}/records/{recordId}
+  description: Delete a DNS zone record
+- name: bulk_delete_dns_zone_records
+  operationId: bulkDeleteDnsZoneRecords
+  method: DELETE
+  path: /v1/dns/zones/{zoneName}/records/bulk
+  description: Bulk delete DNS zone records
+- name: retrieve_dns_audits_list
+  operationId: retrieveDnsAuditsList
+  method: GET
+  path: /v1/dns/zones/audits
+  description: List history about your DNS Zones (audit)
+- name: retrieve_record_audits_list
+  operationId: retrieveRecordAuditsList
+  method: GET
+  path: /v1/dns/records/audits
+  description: List history about your DNS Records (audit)
+- name: retrieve_vip_list
+  operationId: retrieveVipList
+  method: GET
+  path: /v1/vips
+  description: List VIPs
+- name: retrieve_vip
+  operationId: retrieveVip
+  method: GET
+  path: /v1/vips/{ip}
+  description: Get specific VIP by ip
+- name: assign_ip
+  operationId: assignIp
+  method: POST
+  path: /v1/vips/{ip}/{resourceType}/{resourceId}
+  description: Assign a VIP to an VPS/VDS/Bare Metal
+- name: unassign_ip
+  operationId: unassignIp
+  method: DELETE
+  path: /v1/vips/{ip}/{resourceType}/{resourceId}
+  description: Unassign a VIP to a VPS/VDS/Bare Metal
+- name: retrieve_vip_audits_list
+  operationId: retrieveVipAuditsList
+  method: GET
+  path: /v1/vips/audits
+  description: List history about your VIPs (audit)
+- name: retrieve_secret_list
+  operationId: retrieveSecretList
+  method: GET
+  path: /v1/secrets
+  description: List secrets
+- name: create_secret
+  operationId: createSecret
+  method: POST
+  path: /v1/secrets
+  description: Create a new secret
+- name: retrieve_secret
+  operationId: retrieveSecret
+  method: GET
+  path: /v1/secrets/{secretId}
+  description: Get specific secret by id
+- name: update_secret
+  operationId: updateSecret
+  method: PATCH
+  path: /v1/secrets/{secretId}
+  description: Update specific secret by id
+- name: delete_secret
+  operationId: deleteSecret
+  method: DELETE
+  path: /v1/secrets/{secretId}
+  description: Delete existing secret by id
+- name: retrieve_secret_audits_list
+  operationId: retrieveSecretAuditsList
+  method: GET
+  path: /v1/secrets/audits
+  description: List history about your secrets (audit)
+- name: retrieve_private_network_list
+  operationId: retrievePrivateNetworkList
+  method: GET
+  path: /v1/private-networks
+  description: List Private Networks
+- name: create_private_network
+  operationId: createPrivateNetwork
+  method: POST
+  path: /v1/private-networks
+  description: Create a new Private Network

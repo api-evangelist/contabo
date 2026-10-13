@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/contabo/main/json-schema/contabo-update-user-request-schema.json",
+  "title": "UpdateUserRequest",
+  "x-generated": "2026-10-13",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/contabo-openapi.yml#/components/schemas/UpdateUserRequest",
+  "type": "object",
+  "properties": {
+    "firstName": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 255,
+      "description": "The name of the user. Names may contain letters, numbers, colons, dashes, and underscores. There is a limit of 255 characters per user."
+    },
+    "lastName": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 255,
+      "description": "The last name of the user. Users may contain letters, numbers, colons, dashes, and underscores. There is a limit of 255 characters per user."
+    },
+    "enabled": {
+      "type": "boolean",
+      "description": "If user is not enabled, he can't login and thus use services any longer."
+    },
+    "totp": {
+      "type": "boolean",
+      "description": "Enable or disable two-factor authentication (2FA) via time based OTP."
+    },
+    "locale": {
+      "type": "string",
+      "description": "The locale of the user. This can be `de-DE`, `de`, `en-US`, `en`, `es-ES`, `es`, `pt-BR`, `pt`.",
+      "enum": [
+        "de-DE",
+        "de",
+        "en-US",
+        "en",
+        "es",
+        "es-ES",
+        "pt-BR",
+        "pt"
+      ]
+    },
+    "roles": {
+      "type": "array",
+      "description": "The roles as list of `roleId`s of the user.",
+      "items": {
+        "type": "integer",
+        "format": "int64"
+      }
+    },
+    "sendInvoiceEmail": {
+      "type": "boolean",
+      "description": "If enabled, the user receives invoice emails and is registered as an invoice contact in CMS. Only available for users with the Full Access role."
+    }
+  }
+}
