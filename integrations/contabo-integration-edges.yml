@@ -1,5 +1,5 @@
 generated: '2026-10-13'
-method: none
+method: searched
 source:
 - https://zapier.com/apps/contabo/integrations
 - https://n8n.io/integrations/contabo/
@@ -12,5 +12,19 @@ checked:
 - https://zapier.com/apps/contabo/integrations
 summary: null
 marketplace_apps: []
-edges: []
+edges:
+- partner_name: Amazon Web Services
+  partner: amazon-web-services
+  partner_match: shape-anchor
+  channel: provider-built
+  relationship: compatible
+  direction: provider-built
+  shape: aws-s3
+  type: contract
+  degree: declared-unqualified
+  evidence: https://github.com/api-evangelist/contabo/blob/main/openapi/contabo-openapi.yml#L69
+  evidence_kind: own-contract
+  quote: \nPlease note that this is not the S3 compatible API. It is not documented here.\
+  detected_by: sweep-shape-compat.py
+  first_seen: '2026-10-15'
 templates: []
