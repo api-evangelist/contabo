@@ -87,18 +87,1146 @@ common:
 - type: DeveloperPortal
   url: https://contabo.com/en/contabo-api/
 apis:
-- aid: contabo:contabo-api
-  name: Contabo API
-  description: REST API to manage Contabo compute instances, snapshots, custom images, object storage, private networks, VIPs, DNS, domains, secrets, users, roles and tags.
+- aid: contabo:contabo-check-collection-templates-api
+  name: Contabo Check Collection Templates API
+  description: >-
+    The Check Collection Templates API from Contabo — 2 operation(s) for check collection templates.
   humanURL: https://api.contabo.com/
   baseURL: https://api.contabo.com
   tags:
-  - Cloud Hosting
-  - VPS
-  - Object Storage
+  - Check Collection Templates
   properties:
   - type: OpenAPI
-    url: openapi/contabo-openapi.yml
+    url: openapi/contabo-check-collection-templates-api-openapi.yml
+  - type: Documentation
+    url: https://api.contabo.com/
+  - type: CLI
+    url: https://github.com/contabo/cntb
+  - type: JSONSchema
+    url: json-schema/contabo-create-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-patch-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-create-user-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-reinstall-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-update-user-request-schema.json
+- aid: contabo:contabo-check-collections-api
+  name: Contabo Check Collections API
+  description: The Check Collections API from Contabo — 2 operation(s) for check collections.
+  humanURL: https://api.contabo.com/
+  baseURL: https://api.contabo.com
+  tags:
+  - Check Collections
+  properties:
+  - type: OpenAPI
+    url: openapi/contabo-check-collections-api-openapi.yml
+  - type: Documentation
+    url: https://api.contabo.com/
+  - type: CLI
+    url: https://github.com/contabo/cntb
+  - type: JSONSchema
+    url: json-schema/contabo-create-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-patch-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-create-user-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-reinstall-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-update-user-request-schema.json
+- aid: contabo:contabo-checks-api
+  name: Contabo Checks API
+  description: The Checks API from Contabo — 2 operation(s) for checks.
+  humanURL: https://api.contabo.com/
+  baseURL: https://api.contabo.com
+  tags:
+  - Checks
+  properties:
+  - type: OpenAPI
+    url: openapi/contabo-checks-api-openapi.yml
+  - type: Documentation
+    url: https://api.contabo.com/
+  - type: CLI
+    url: https://github.com/contabo/cntb
+  - type: JSONSchema
+    url: json-schema/contabo-create-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-patch-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-create-user-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-reinstall-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-update-user-request-schema.json
+- aid: contabo:contabo-dns-api
+  name: Contabo DNS API
+  description: DNS API allows you to create and manage dns for your instances (Cloud VPS/VDS).
+  humanURL: https://api.contabo.com/
+  baseURL: https://api.contabo.com
+  tags:
+  - DNS
+  properties:
+  - type: OpenAPI
+    url: openapi/contabo-dns-api-openapi.yml
+  - type: Documentation
+    url: https://api.contabo.com/
+  - type: CLI
+    url: https://github.com/contabo/cntb
+  - type: JSONSchema
+    url: json-schema/contabo-create-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-patch-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-create-user-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-reinstall-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-update-user-request-schema.json
+- aid: contabo:contabo-dns-audits-api
+  name: Contabo DNS Audits API
+  description: DNS API allows you to create and manage dns for your instances (Cloud VPS/VDS).
+  humanURL: https://api.contabo.com/
+  baseURL: https://api.contabo.com
+  tags:
+  - DNS Audits
+  properties:
+  - type: OpenAPI
+    url: openapi/contabo-dns-audits-api-openapi.yml
+  - type: Documentation
+    url: https://api.contabo.com/
+  - type: CLI
+    url: https://github.com/contabo/cntb
+  - type: JSONSchema
+    url: json-schema/contabo-create-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-patch-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-create-user-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-reinstall-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-update-user-request-schema.json
+- aid: contabo:contabo-domains-api
+  name: Contabo Domains API
+  description: Domains API allows you to create and manage Domains.
+  humanURL: https://api.contabo.com/
+  baseURL: https://api.contabo.com
+  tags:
+  - Domains
+  properties:
+  - type: OpenAPI
+    url: openapi/contabo-domains-api-openapi.yml
+  - type: Documentation
+    url: https://api.contabo.com/
+  - type: CLI
+    url: https://github.com/contabo/cntb
+  - type: JSONSchema
+    url: json-schema/contabo-create-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-patch-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-create-user-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-reinstall-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-update-user-request-schema.json
+- aid: contabo:contabo-domains-audits-api
+  name: Contabo Domains Audits API
+  description: The Domains Audits API from Contabo — 1 operation(s) for domains audits.
+  humanURL: https://api.contabo.com/
+  baseURL: https://api.contabo.com
+  tags:
+  - Domains Audits
+  properties:
+  - type: OpenAPI
+    url: openapi/contabo-domains-audits-api-openapi.yml
+  - type: Documentation
+    url: https://api.contabo.com/
+  - type: CLI
+    url: https://github.com/contabo/cntb
+  - type: JSONSchema
+    url: json-schema/contabo-create-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-patch-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-create-user-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-reinstall-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-update-user-request-schema.json
+- aid: contabo:contabo-firewalls-api
+  name: Contabo Firewalls API
+  description: >-
+    Firewall API allows you to create and manage firewalls for your instances (Cloud VPS/VDS). Each instance
+    protected by customizable inbound firewall rules requires a paid firewall add-on. Rules allow inbound
+    traffic based on protocols (TCP, UDP, ICMP), ports and sources (IPs or nets).
+  humanURL: https://api.contabo.com/
+  baseURL: https://api.contabo.com
+  tags:
+  - Firewalls
+  properties:
+  - type: OpenAPI
+    url: openapi/contabo-firewalls-api-openapi.yml
+  - type: Documentation
+    url: https://api.contabo.com/
+  - type: CLI
+    url: https://github.com/contabo/cntb
+  - type: JSONSchema
+    url: json-schema/contabo-create-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-patch-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-create-user-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-reinstall-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-update-user-request-schema.json
+- aid: contabo:contabo-firewalls-audits-api
+  name: Contabo Firewalls Audits API
+  description: The Firewalls Audits API from Contabo — 1 operation(s) for firewalls audits.
+  humanURL: https://api.contabo.com/
+  baseURL: https://api.contabo.com
+  tags:
+  - Firewalls Audits
+  properties:
+  - type: OpenAPI
+    url: openapi/contabo-firewalls-audits-api-openapi.yml
+  - type: Documentation
+    url: https://api.contabo.com/
+  - type: CLI
+    url: https://github.com/contabo/cntb
+  - type: JSONSchema
+    url: json-schema/contabo-create-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-patch-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-create-user-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-reinstall-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-update-user-request-schema.json
+- aid: contabo:contabo-handles-api
+  name: Contabo Handles API
+  description: Domains API allows you to create and manage Domains.
+  humanURL: https://api.contabo.com/
+  baseURL: https://api.contabo.com
+  tags:
+  - Handles
+  properties:
+  - type: OpenAPI
+    url: openapi/contabo-handles-api-openapi.yml
+  - type: Documentation
+    url: https://api.contabo.com/
+  - type: CLI
+    url: https://github.com/contabo/cntb
+  - type: JSONSchema
+    url: json-schema/contabo-create-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-patch-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-create-user-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-reinstall-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-update-user-request-schema.json
+- aid: contabo:contabo-handles-audits-api
+  name: Contabo Handles Audits API
+  description: The Handles Audits API from Contabo — 1 operation(s) for handles audits.
+  humanURL: https://api.contabo.com/
+  baseURL: https://api.contabo.com
+  tags:
+  - Handles Audits
+  properties:
+  - type: OpenAPI
+    url: openapi/contabo-handles-audits-api-openapi.yml
+  - type: Documentation
+    url: https://api.contabo.com/
+  - type: CLI
+    url: https://github.com/contabo/cntb
+  - type: JSONSchema
+    url: json-schema/contabo-create-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-patch-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-create-user-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-reinstall-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-update-user-request-schema.json
+- aid: contabo:contabo-images-api
+  name: Contabo Images API
+  description: >-
+    The Compute Management API allows you to manage compute resources (e.g. creation, deletion, starting,
+    stopping)
+
+    as well as managing snapshots and custom images. It also supports [cloud-init](https://cloud-init.io/)
+    at least on our default images
+
+    (for custom images you'll need to provide cloud-init support packages). The API offers providing [cloud-init](https://cloud-init.io/)
+    scripts via the `user_data` field.
+
+    Custom images must be provided in .qcow2 or .iso format.
+  humanURL: https://api.contabo.com/
+  baseURL: https://api.contabo.com
+  tags:
+  - Images
+  properties:
+  - type: OpenAPI
+    url: openapi/contabo-images-api-openapi.yml
+  - type: Documentation
+    url: https://api.contabo.com/
+  - type: CLI
+    url: https://github.com/contabo/cntb
+  - type: JSONSchema
+    url: json-schema/contabo-create-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-patch-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-create-user-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-reinstall-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-update-user-request-schema.json
+- aid: contabo:contabo-images-audits-api
+  name: Contabo Images Audits API
+  description: >-
+    The Compute Management API allows you to manage compute resources (e.g. creation, deletion, starting,
+    stopping)
+
+    as well as managing snapshots and custom images. It also supports [cloud-init](https://cloud-init.io/)
+    at least on our default images
+
+    (for custom images you'll need to provide cloud-init support packages). The API offers providing [cloud-init](https://cloud-init.io/)
+    scripts via the `user_data` field.
+
+    Custom images must be provided in .qcow2 or .iso format.
+  humanURL: https://api.contabo.com/
+  baseURL: https://api.contabo.com
+  tags:
+  - Images Audits
+  properties:
+  - type: OpenAPI
+    url: openapi/contabo-images-audits-api-openapi.yml
+  - type: Documentation
+    url: https://api.contabo.com/
+  - type: CLI
+    url: https://github.com/contabo/cntb
+  - type: JSONSchema
+    url: json-schema/contabo-create-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-patch-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-create-user-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-reinstall-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-update-user-request-schema.json
+- aid: contabo:contabo-instance-actions-api
+  name: Contabo Instance Actions API
+  description: >-
+    The Compute Management API allows you to manage compute resources (e.g. creation, deletion, starting,
+    stopping)
+
+    as well as managing snapshots and custom images. It also supports [cloud-init](https://cloud-init.io/)
+    at least on our default images
+
+    (for custom images you'll need to provide cloud-init support packages). The API offers providing [cloud-init](https://cloud-init.io/)
+    scripts via the `user_data` field.
+
+    Custom images must be provided in .qcow2 or .iso format.
+  humanURL: https://api.contabo.com/
+  baseURL: https://api.contabo.com
+  tags:
+  - Instance Actions
+  properties:
+  - type: OpenAPI
+    url: openapi/contabo-instance-actions-api-openapi.yml
+  - type: Documentation
+    url: https://api.contabo.com/
+  - type: CLI
+    url: https://github.com/contabo/cntb
+  - type: JSONSchema
+    url: json-schema/contabo-create-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-patch-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-create-user-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-reinstall-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-update-user-request-schema.json
+- aid: contabo:contabo-instance-actions-audits-api
+  name: Contabo Instance Actions Audits API
+  description: >-
+    The Compute Management API allows you to manage compute resources (e.g. creation, deletion, starting,
+    stopping)
+
+    as well as managing snapshots and custom images. It also supports [cloud-init](https://cloud-init.io/)
+    at least on our default images
+
+    (for custom images you'll need to provide cloud-init support packages). The API offers providing [cloud-init](https://cloud-init.io/)
+    scripts via the `user_data` field.
+
+    Custom images must be provided in .qcow2 or .iso format.
+  humanURL: https://api.contabo.com/
+  baseURL: https://api.contabo.com
+  tags:
+  - Instance Actions Audits
+  properties:
+  - type: OpenAPI
+    url: openapi/contabo-instance-actions-audits-api-openapi.yml
+  - type: Documentation
+    url: https://api.contabo.com/
+  - type: CLI
+    url: https://github.com/contabo/cntb
+  - type: JSONSchema
+    url: json-schema/contabo-create-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-patch-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-create-user-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-reinstall-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-update-user-request-schema.json
+- aid: contabo:contabo-instances-api
+  name: Contabo Instances API
+  description: >-
+    The Compute Management API allows you to manage compute resources (e.g. creation, deletion, starting,
+    stopping)
+
+    as well as managing snapshots and custom images. It also supports [cloud-init](https://cloud-init.io/)
+    at least on our default images
+
+    (for custom images you'll need to provide cloud-init support packages). The API offers providing [cloud-init](https://cloud-init.io/)
+    scripts via the `user_data` field.
+
+    Custom images must be provided in .qcow2 or .iso format.
+  humanURL: https://api.contabo.com/
+  baseURL: https://api.contabo.com
+  tags:
+  - Instances
+  properties:
+  - type: OpenAPI
+    url: openapi/contabo-instances-api-openapi.yml
+  - type: Documentation
+    url: https://api.contabo.com/
+  - type: CLI
+    url: https://github.com/contabo/cntb
+  - type: JSONSchema
+    url: json-schema/contabo-create-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-patch-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-create-user-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-reinstall-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-update-user-request-schema.json
+- aid: contabo:contabo-instances-audits-api
+  name: Contabo Instances Audits API
+  description: >-
+    The Compute Management API allows you to manage compute resources (e.g. creation, deletion, starting,
+    stopping)
+
+    as well as managing snapshots and custom images. It also supports [cloud-init](https://cloud-init.io/)
+    at least on our default images
+
+    (for custom images you'll need to provide cloud-init support packages). The API offers providing [cloud-init](https://cloud-init.io/)
+    scripts via the `user_data` field.
+
+    Custom images must be provided in .qcow2 or .iso format.
+  humanURL: https://api.contabo.com/
+  baseURL: https://api.contabo.com
+  tags:
+  - Instances Audits
+  properties:
+  - type: OpenAPI
+    url: openapi/contabo-instances-audits-api-openapi.yml
+  - type: Documentation
+    url: https://api.contabo.com/
+  - type: CLI
+    url: https://github.com/contabo/cntb
+  - type: JSONSchema
+    url: json-schema/contabo-create-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-patch-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-create-user-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-reinstall-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-update-user-request-schema.json
+- aid: contabo:contabo-instances-products-api
+  name: Contabo Instances Products API
+  description: The Instances Products API from Contabo — 1 operation(s) for instances products.
+  humanURL: https://api.contabo.com/
+  baseURL: https://api.contabo.com
+  tags:
+  - Instances Products
+  properties:
+  - type: OpenAPI
+    url: openapi/contabo-instances-products-api-openapi.yml
+  - type: Documentation
+    url: https://api.contabo.com/
+  - type: CLI
+    url: https://github.com/contabo/cntb
+  - type: JSONSchema
+    url: json-schema/contabo-create-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-patch-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-create-user-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-reinstall-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-update-user-request-schema.json
+- aid: contabo:contabo-object-storages-api
+  name: Contabo Object Storages API
+  description: >-
+    Manage S3 compatible Object Storage. With the Object Storage API you can create Object Storage in
+    different locations. Please note that you can only have one Object Storage per location. Furthermore
+    you can increase the amount of storage space and control the autoscaling feature which allows to automatically
+    perform a monthly upgrade of the disk space to the specified maximum. You might also inspect the usage.
+    This API is not the S3 API itself. For accessing the S3 API directly or with S3 compatible tools like
+    `aws` cli after and after having created / upgraded your Object Storage please use the S3 URL from
+    this Storage API and refer to the User Mangement API to retrieve the S3 credentials.
+  humanURL: https://api.contabo.com/
+  baseURL: https://api.contabo.com
+  tags:
+  - Object Storages
+  properties:
+  - type: OpenAPI
+    url: openapi/contabo-object-storages-api-openapi.yml
+  - type: Documentation
+    url: https://api.contabo.com/
+  - type: CLI
+    url: https://github.com/contabo/cntb
+  - type: JSONSchema
+    url: json-schema/contabo-create-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-patch-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-create-user-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-reinstall-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-update-user-request-schema.json
+- aid: contabo:contabo-object-storages-audits-api
+  name: Contabo Object Storages Audits API
+  description: >-
+    Manage S3 compatible Object Storage. With the Object Storage API you can create Object Storage in
+    different locations. Please note that you can only have one Object Storage per location. Furthermore
+    you can increase the amount of storage space and control the autoscaling feature which allows to automatically
+    perform a monthly upgrade of the disk space to the specified maximum. You might also inspect the usage.
+    This API is not the S3 API itself. For accessing the S3 API directly or with S3 compatible tools like
+    `aws` cli after and after having created / upgraded your Object Storage please use the S3 URL from
+    this Storage API and refer to the User Mangement API to retrieve the S3 credentials.
+  humanURL: https://api.contabo.com/
+  baseURL: https://api.contabo.com
+  tags:
+  - Object Storages Audits
+  properties:
+  - type: OpenAPI
+    url: openapi/contabo-object-storages-audits-api-openapi.yml
+  - type: Documentation
+    url: https://api.contabo.com/
+  - type: CLI
+    url: https://github.com/contabo/cntb
+  - type: JSONSchema
+    url: json-schema/contabo-create-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-patch-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-create-user-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-reinstall-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-update-user-request-schema.json
+- aid: contabo:contabo-private-networks-api
+  name: Contabo Private Networks API
+  description: >-
+    Private Networking API allows you to create and manage Private Networks / Virtual Private Vloud (VPC)
+    for your instances (Cloud VPS/VDS). Private Network / VPC allows private and direct communication
+    between instances using private IPs. Traffic doesn't leave a Data Center. This feature requires a
+    payed add-on for each instance being part of a Private Network. Instance can be part of multiple Private
+    Networks.
+  humanURL: https://api.contabo.com/
+  baseURL: https://api.contabo.com
+  tags:
+  - Private Networks
+  properties:
+  - type: OpenAPI
+    url: openapi/contabo-private-networks-api-openapi.yml
+  - type: Documentation
+    url: https://api.contabo.com/
+  - type: CLI
+    url: https://github.com/contabo/cntb
+  - type: JSONSchema
+    url: json-schema/contabo-create-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-patch-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-create-user-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-reinstall-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-update-user-request-schema.json
+- aid: contabo:contabo-private-networks-audits-api
+  name: Contabo Private Networks Audits API
+  description: >-
+    Private Networking API allows you to create and manage Private Networks / Virtual Private Vloud (VPC)
+    for your instances (Cloud VPS/VDS). Private Network / VPC allows private and direct communication
+    between instances using private IPs. Traffic doesn't leave a Data Center. This feature requires a
+    payed add-on for each instance being part of a Private Network. Instance can be part of multiple Private
+    Networks.
+  humanURL: https://api.contabo.com/
+  baseURL: https://api.contabo.com
+  tags:
+  - Private Networks Audits
+  properties:
+  - type: OpenAPI
+    url: openapi/contabo-private-networks-audits-api-openapi.yml
+  - type: Documentation
+    url: https://api.contabo.com/
+  - type: CLI
+    url: https://github.com/contabo/cntb
+  - type: JSONSchema
+    url: json-schema/contabo-create-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-patch-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-create-user-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-reinstall-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-update-user-request-schema.json
+- aid: contabo:contabo-remedies-api
+  name: Contabo Remedies API
+  description: The Remedies API from Contabo — 2 operation(s) for remedies.
+  humanURL: https://api.contabo.com/
+  baseURL: https://api.contabo.com
+  tags:
+  - Remedies
+  properties:
+  - type: OpenAPI
+    url: openapi/contabo-remedies-api-openapi.yml
+  - type: Documentation
+    url: https://api.contabo.com/
+  - type: CLI
+    url: https://github.com/contabo/cntb
+  - type: JSONSchema
+    url: json-schema/contabo-create-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-patch-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-create-user-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-reinstall-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-update-user-request-schema.json
+- aid: contabo:contabo-roles-api
+  name: Contabo Roles API
+  description: >-
+    Give access to all api endpoints and resources or manage to which endpoints and resources individual
+    users might have access to. Permissions are organized in roles. Users can have roles assigned. Roles
+    can grant and restrict access to different API's or to specific resources. Permissions for resources
+    are declared by using tags which have been assigned to resources.
+  humanURL: https://api.contabo.com/
+  baseURL: https://api.contabo.com
+  tags:
+  - Roles
+  properties:
+  - type: OpenAPI
+    url: openapi/contabo-roles-api-openapi.yml
+  - type: Documentation
+    url: https://api.contabo.com/
+  - type: CLI
+    url: https://github.com/contabo/cntb
+  - type: JSONSchema
+    url: json-schema/contabo-create-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-patch-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-create-user-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-reinstall-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-update-user-request-schema.json
+- aid: contabo:contabo-roles-audits-api
+  name: Contabo Roles Audits API
+  description: >-
+    Give access to all api endpoints and resources or manage to which endpoints and resources individual
+    users might have access to. Permissions are organized in roles. Users can have roles assigned. Roles
+    can grant and restrict access to different API's or to specific resources. Permissions for resources
+    are declared by using tags which have been assigned to resources.
+  humanURL: https://api.contabo.com/
+  baseURL: https://api.contabo.com
+  tags:
+  - Roles Audits
+  properties:
+  - type: OpenAPI
+    url: openapi/contabo-roles-audits-api-openapi.yml
+  - type: Documentation
+    url: https://api.contabo.com/
+  - type: CLI
+    url: https://github.com/contabo/cntb
+  - type: JSONSchema
+    url: json-schema/contabo-create-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-patch-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-create-user-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-reinstall-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-update-user-request-schema.json
+- aid: contabo:contabo-secrets-api
+  name: Contabo Secrets API
+  description: >-
+    The Secret Management API allows you to store and manage your passwords and ssh-keys. Usage of the
+    Secret Management API is purely optional. As a convenience feature e.g. it allows you to reuse SSH-keys
+    easily.
+  humanURL: https://api.contabo.com/
+  baseURL: https://api.contabo.com
+  tags:
+  - Secrets
+  properties:
+  - type: OpenAPI
+    url: openapi/contabo-secrets-api-openapi.yml
+  - type: Documentation
+    url: https://api.contabo.com/
+  - type: CLI
+    url: https://github.com/contabo/cntb
+  - type: JSONSchema
+    url: json-schema/contabo-create-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-patch-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-create-user-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-reinstall-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-update-user-request-schema.json
+- aid: contabo:contabo-secrets-audits-api
+  name: Contabo Secrets Audits API
+  description: >-
+    The Secret Management API allows you to store and manage your passwords and ssh-keys. Usage of the
+    Secret Management API is purely optional. As a convenience feature e.g. it allows you to reuse SSH-keys
+    easily.
+  humanURL: https://api.contabo.com/
+  baseURL: https://api.contabo.com
+  tags:
+  - Secrets Audits
+  properties:
+  - type: OpenAPI
+    url: openapi/contabo-secrets-audits-api-openapi.yml
+  - type: Documentation
+    url: https://api.contabo.com/
+  - type: CLI
+    url: https://github.com/contabo/cntb
+  - type: JSONSchema
+    url: json-schema/contabo-create-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-patch-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-create-user-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-reinstall-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-update-user-request-schema.json
+- aid: contabo:contabo-snapshots-api
+  name: Contabo Snapshots API
+  description: The Snapshots API from Contabo — 3 operation(s) for snapshots.
+  humanURL: https://api.contabo.com/
+  baseURL: https://api.contabo.com
+  tags:
+  - Snapshots
+  properties:
+  - type: OpenAPI
+    url: openapi/contabo-snapshots-api-openapi.yml
+  - type: Documentation
+    url: https://api.contabo.com/
+  - type: CLI
+    url: https://github.com/contabo/cntb
+  - type: JSONSchema
+    url: json-schema/contabo-create-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-patch-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-create-user-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-reinstall-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-update-user-request-schema.json
+- aid: contabo:contabo-snapshots-audits-api
+  name: Contabo Snapshots Audits API
+  description: The Snapshots Audits API from Contabo — 1 operation(s) for snapshots audits.
+  humanURL: https://api.contabo.com/
+  baseURL: https://api.contabo.com
+  tags:
+  - Snapshots Audits
+  properties:
+  - type: OpenAPI
+    url: openapi/contabo-snapshots-audits-api-openapi.yml
+  - type: Documentation
+    url: https://api.contabo.com/
+  - type: CLI
+    url: https://github.com/contabo/cntb
+  - type: JSONSchema
+    url: json-schema/contabo-create-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-patch-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-create-user-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-reinstall-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-update-user-request-schema.json
+- aid: contabo:contabo-tag-assignments-api
+  name: Contabo Tag Assignments API
+  description: >-
+    Tags are Customer-defined labels which can be attached to any resource in your account. Tag API represent
+    simple CRUD functions and allow you to manage your tags.
+
+    Use tags to group your resources. For example you can define some user group with tag and give them
+    permission to create compute instances.
+  humanURL: https://api.contabo.com/
+  baseURL: https://api.contabo.com
+  tags:
+  - Tag Assignments
+  properties:
+  - type: OpenAPI
+    url: openapi/contabo-tag-assignments-api-openapi.yml
+  - type: Documentation
+    url: https://api.contabo.com/
+  - type: CLI
+    url: https://github.com/contabo/cntb
+  - type: JSONSchema
+    url: json-schema/contabo-create-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-patch-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-create-user-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-reinstall-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-update-user-request-schema.json
+- aid: contabo:contabo-tag-assignments-audits-api
+  name: Contabo Tag Assignments Audits API
+  description: >-
+    Tags are Customer-defined labels which can be attached to any resource in your account. Tag API represent
+    simple CRUD functions and allow you to manage your tags.
+
+    Use tags to group your resources. For example you can define some user group with tag and give them
+    permission to create compute instances.
+  humanURL: https://api.contabo.com/
+  baseURL: https://api.contabo.com
+  tags:
+  - Tag Assignments Audits
+  properties:
+  - type: OpenAPI
+    url: openapi/contabo-tag-assignments-audits-api-openapi.yml
+  - type: Documentation
+    url: https://api.contabo.com/
+  - type: CLI
+    url: https://github.com/contabo/cntb
+  - type: JSONSchema
+    url: json-schema/contabo-create-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-patch-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-create-user-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-reinstall-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-update-user-request-schema.json
+- aid: contabo:contabo-tags-api
+  name: Contabo Tags API
+  description: >-
+    Tags are Customer-defined labels which can be attached to any resource in your account. Tag API represent
+    simple CRUD functions and allow you to manage your tags.
+
+    Use tags to group your resources. For example you can define some user group with tag and give them
+    permission to create compute instances.
+  humanURL: https://api.contabo.com/
+  baseURL: https://api.contabo.com
+  tags:
+  - Tags
+  properties:
+  - type: OpenAPI
+    url: openapi/contabo-tags-api-openapi.yml
+  - type: Documentation
+    url: https://api.contabo.com/
+  - type: CLI
+    url: https://github.com/contabo/cntb
+  - type: JSONSchema
+    url: json-schema/contabo-create-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-patch-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-create-user-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-reinstall-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-update-user-request-schema.json
+- aid: contabo:contabo-tags-audits-api
+  name: Contabo Tags Audits API
+  description: >-
+    Tags are Customer-defined labels which can be attached to any resource in your account. Tag API represent
+    simple CRUD functions and allow you to manage your tags.
+
+    Use tags to group your resources. For example you can define some user group with tag and give them
+    permission to create compute instances.
+  humanURL: https://api.contabo.com/
+  baseURL: https://api.contabo.com
+  tags:
+  - Tags Audits
+  properties:
+  - type: OpenAPI
+    url: openapi/contabo-tags-audits-api-openapi.yml
+  - type: Documentation
+    url: https://api.contabo.com/
+  - type: CLI
+    url: https://github.com/contabo/cntb
+  - type: JSONSchema
+    url: json-schema/contabo-create-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-patch-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-create-user-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-reinstall-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-update-user-request-schema.json
+- aid: contabo:contabo-user-accounts-api
+  name: Contabo User Accounts API
+  description: >-
+    Give access to all api endpoints and resources or manage to which endpoints and resources individual
+    users might have access to. Permissions are organized in roles. Users can have roles assigned. Roles
+    can grant and restrict access to different API's or to specific resources. Permissions for resources
+    are declared by using tags which have been assigned to resources.
+  humanURL: https://api.contabo.com/
+  baseURL: https://api.contabo.com
+  tags:
+  - User Accounts
+  properties:
+  - type: OpenAPI
+    url: openapi/contabo-user-accounts-api-openapi.yml
+  - type: Documentation
+    url: https://api.contabo.com/
+  - type: CLI
+    url: https://github.com/contabo/cntb
+  - type: JSONSchema
+    url: json-schema/contabo-create-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-patch-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-create-user-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-reinstall-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-update-user-request-schema.json
+- aid: contabo:contabo-users-api
+  name: Contabo Users API
+  description: >-
+    Give access to all api endpoints and resources or manage to which endpoints and resources individual
+    users might have access to. Permissions are organized in roles. Users can have roles assigned. Roles
+    can grant and restrict access to different API's or to specific resources. Permissions for resources
+    are declared by using tags which have been assigned to resources.
+  humanURL: https://api.contabo.com/
+  baseURL: https://api.contabo.com
+  tags:
+  - Users
+  properties:
+  - type: OpenAPI
+    url: openapi/contabo-users-api-openapi.yml
+  - type: Documentation
+    url: https://api.contabo.com/
+  - type: CLI
+    url: https://github.com/contabo/cntb
+  - type: JSONSchema
+    url: json-schema/contabo-create-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-patch-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-create-user-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-reinstall-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-update-user-request-schema.json
+- aid: contabo:contabo-users-audits-api
+  name: Contabo Users Audits API
+  description: >-
+    Give access to all api endpoints and resources or manage to which endpoints and resources individual
+    users might have access to. Permissions are organized in roles. Users can have roles assigned. Roles
+    can grant and restrict access to different API's or to specific resources. Permissions for resources
+    are declared by using tags which have been assigned to resources.
+  humanURL: https://api.contabo.com/
+  baseURL: https://api.contabo.com
+  tags:
+  - Users Audits
+  properties:
+  - type: OpenAPI
+    url: openapi/contabo-users-audits-api-openapi.yml
+  - type: Documentation
+    url: https://api.contabo.com/
+  - type: CLI
+    url: https://github.com/contabo/cntb
+  - type: JSONSchema
+    url: json-schema/contabo-create-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-patch-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-create-user-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-reinstall-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-update-user-request-schema.json
+- aid: contabo:contabo-users-object-storage-credentials-api
+  name: Contabo Users Object Storage Credentials API
+  description: >-
+    Give access to all api endpoints and resources or manage to which endpoints and resources individual
+    users might have access to. Permissions are organized in roles. Users can have roles assigned. Roles
+    can grant and restrict access to different API's or to specific resources. Permissions for resources
+    are declared by using tags which have been assigned to resources.
+  humanURL: https://api.contabo.com/
+  baseURL: https://api.contabo.com
+  tags:
+  - Users Object Storage Credentials
+  properties:
+  - type: OpenAPI
+    url: openapi/contabo-users-object-storage-credentials-api-openapi.yml
+  - type: Documentation
+    url: https://api.contabo.com/
+  - type: CLI
+    url: https://github.com/contabo/cntb
+  - type: JSONSchema
+    url: json-schema/contabo-create-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-patch-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-create-user-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-reinstall-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-update-user-request-schema.json
+- aid: contabo:contabo-vip-api
+  name: Contabo VIP API
+  description: >-
+    VIP (Virtual IPs) API manages virtual IP adresses including ´additional´ and ´floating´ IPv4 Adresses.
+    Virtual IPs are payed add-ons (Additional IP) which can be freely assigned to Cloud VPS/VDS or Bare
+    Metal. Please note, that assgnments of virtual IPs to servers is only for documentation purposes.
+    Technical Assignemts must be configured on operation system level, see [docs](https://docs.contabo.com/docs/products/intro).
+  humanURL: https://api.contabo.com/
+  baseURL: https://api.contabo.com
+  tags:
+  - VIP
+  properties:
+  - type: OpenAPI
+    url: openapi/contabo-vip-api-openapi.yml
+  - type: Documentation
+    url: https://api.contabo.com/
+  - type: CLI
+    url: https://github.com/contabo/cntb
+  - type: JSONSchema
+    url: json-schema/contabo-create-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-handle-patch-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-create-user-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-reinstall-instance-request-schema.json
+  - type: JSONSchema
+    url: json-schema/contabo-update-user-request-schema.json
+- aid: contabo:contabo-vip-audits-api
+  name: Contabo Vip Audits API
+  description: The Vip Audits API from Contabo — 1 operation(s) for vip audits.
+  humanURL: https://api.contabo.com/
+  baseURL: https://api.contabo.com
+  tags:
+  - Vip Audits
+  properties:
+  - type: OpenAPI
+    url: openapi/contabo-vip-audits-api-openapi.yml
   - type: Documentation
     url: https://api.contabo.com/
   - type: CLI

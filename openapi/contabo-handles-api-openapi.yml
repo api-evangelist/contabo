@@ -1,0 +1,961 @@
+openapi: 3.2.0
+info:
+  title: Contabo Handles API
+  version: 1.0.0
+  contact:
+    email: support@contabo.com
+    url: https://contabo.com
+  termsOfService: https://contabo.com/en/legal/terms-and-conditions/
+  x-logo:
+    url: data:image/png;base64,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
+    altText: Contabo Logo
+  description: 'Operations tagged Handles across 2 of this provider''s published API definitions: contabo-api-redoc-embedded.json, contabo-openapi.yml. Each path carries the servers of the definition it was published in.'
+servers:
+- url: https://api.contabo.com
+tags:
+- name: Handles
+  description: Domains API allows you to create and manage Domains.
+paths:
+  /v1/domains/handles:
+    get:
+      description: List and filter all your handles
+      operationId: listHandles
+      parameters:
+      - name: x-request-id
+        in: header
+        description: '[Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually.'
+        required: true
+        allowEmptyValue: false
+        schema:
+          type: string
+          example: 04e0f898-37b4-48bc-a794-1a57abe6aa31
+          pattern: ^[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-5][0-9A-Fa-f]{3}-[089abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}$
+      - name: x-trace-id
+        in: header
+        description: Identifier to trace group of requests.
+        required: false
+        allowEmptyValue: false
+        schema:
+          type: string
+      - name: page
+        required: false
+        in: query
+        description: Number of page to be fetched.
+        schema:
+          format: int64
+          example: 1
+          type: integer
+      - name: size
+        required: false
+        in: query
+        description: Number of elements per page.
+        schema:
+          format: int64
+          example: 10
+          type: integer
+      - name: orderBy
+        required: false
+        in: query
+        description: Specify fields and ordering (ASC for ascending, DESC for descending) in following format `field:ASC|DESC`.
+        schema:
+          example: name:asc
+          type: array
+          items:
+            type: string
+      - name: name
+        required: false
+        in: query
+        description: Filter as substring match for handle name.
+        schema:
+          example: MyHandle
+          type: string
+      - name: showDefaults
+        required: false
+        in: query
+        description: Filter handles to show or not the public handles
+        schema:
+          example: 'true'
+          type: boolean
+      - name: search
+        required: false
+        in: query
+        description: 'full text search on handles on handleid, organization name, handlename '
+        schema:
+          example: hello
+          type: string
+      - name: countries
+        required: false
+        in: query
+        description: list of country codes to filter handles that are available in these countries (comma separated)
+        schema:
+          example: DE,US
+          type: string
+      - name: handleType
+        required: false
+        in: query
+        description: Filter handles by type, e.g. person, organization.
+        schema:
+          example: person
+          type: string
+      - name: firstName
+        required: false
+        in: query
+        description: Filter handles by first name.
+        schema:
+          example: FirstName
+          type: string
+      - name: lastName
+        required: false
+        in: query
+        description: Filter handles by last name.
+        schema:
+          example: LastName
+          type: string
+      responses:
+        '200':
+          description: The response will be a JSON object and contains standard handles attributes
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HandleListResponse'
+      security:
+      - bearer: []
+      summary: List all handles
+      tags:
+      - Handles
+    post:
+      operationId: createHandle
+      parameters:
+      - name: x-request-id
+        in: header
+        description: '[Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually.'
+        required: true
+        allowEmptyValue: false
+        schema:
+          type: string
+          example: 04e0f898-37b4-48bc-a794-1a57abe6aa31
+          pattern: ^[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-5][0-9A-Fa-f]{3}-[089abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}$
+      - name: x-trace-id
+        in: header
+        description: Identifier to trace group of requests.
+        required: false
+        allowEmptyValue: false
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/HandleCreateRequest'
+      responses:
+        '201':
+          description: The response will be a JSON object and contains standard handle attributes
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HandleCreateResponse'
+      security:
+      - bearer: []
+      summary: Create specific handle
+      tags:
+      - Handles
+    servers:
+    - url: https://api.contabo.com
+  /v1/domains/handles/{handleId}:
+    get:
+      operationId: retrieveHandle
+      parameters:
+      - name: x-request-id
+        in: header
+        description: '[Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually.'
+        required: true
+        allowEmptyValue: false
+        schema:
+          type: string
+          example: 04e0f898-37b4-48bc-a794-1a57abe6aa31
+          pattern: ^[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-5][0-9A-Fa-f]{3}-[089abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}$
+      - name: x-trace-id
+        in: header
+        description: Identifier to trace group of requests.
+        required: false
+        allowEmptyValue: false
+        schema:
+          type: string
+      - name: handleId
+        required: true
+        in: path
+        description: The identifier of the handle
+        schema:
+          example: CA123O1
+          type: string
+      responses:
+        '200':
+          description: The response will be a JSON object and contains standard handle attributes
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HandleFindResponse'
+      security:
+      - bearer: []
+      summary: Get specific handle
+      tags:
+      - Handles
+    delete:
+      operationId: removeHandle
+      parameters:
+      - name: x-request-id
+        in: header
+        description: '[Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually.'
+        required: true
+        allowEmptyValue: false
+        schema:
+          type: string
+          example: 04e0f898-37b4-48bc-a794-1a57abe6aa31
+          pattern: ^[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-5][0-9A-Fa-f]{3}-[089abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}$
+      - name: x-trace-id
+        in: header
+        description: Identifier to trace group of requests.
+        required: false
+        allowEmptyValue: false
+        schema:
+          type: string
+      - name: handleId
+        required: true
+        in: path
+        description: The identifier of the handle
+        schema:
+          example: CA123O1
+          type: string
+      responses:
+        '204':
+          description: Response body has no content
+      security:
+      - bearer: []
+      summary: Remove specific handle
+      tags:
+      - Handles
+    put:
+      operationId: updateHandle
+      parameters:
+      - name: x-request-id
+        in: header
+        description: '[Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually.'
+        required: true
+        allowEmptyValue: false
+        schema:
+          type: string
+          example: 04e0f898-37b4-48bc-a794-1a57abe6aa31
+          pattern: ^[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-5][0-9A-Fa-f]{3}-[089abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}$
+      - name: x-trace-id
+        in: header
+        description: Identifier to trace group of requests.
+        required: false
+        allowEmptyValue: false
+        schema:
+          type: string
+      - name: handleId
+        required: true
+        in: path
+        description: The identifier of the handle
+        schema:
+          example: CA123O1
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/HandlePatchRequest'
+      responses:
+        '200':
+          description: Updated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HandlePatchResponse'
+      security:
+      - bearer: []
+      summary: Update specific handle
+      tags:
+      - Handles
+    servers:
+    - url: https://api.contabo.com
+  /v1/domains/handles/{handleId}/default:
+    patch:
+      operationId: setDefaultHandle
+      parameters:
+      - name: x-request-id
+        in: header
+        description: '[Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually.'
+        required: true
+        allowEmptyValue: false
+        schema:
+          type: string
+          example: 04e0f898-37b4-48bc-a794-1a57abe6aa31
+          pattern: ^[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-5][0-9A-Fa-f]{3}-[089abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}$
+      - name: x-trace-id
+        in: header
+        description: Identifier to trace group of requests.
+        required: false
+        allowEmptyValue: false
+        schema:
+          type: string
+      - name: handleId
+        required: true
+        in: path
+        description: The identifier of the handle
+        schema:
+          example: CA123O1
+          type: string
+      responses:
+        '200':
+          description: The response will be a JSON object which will contain a details of a handle.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SetDefaultHandleResponse'
+      security:
+      - bearer: []
+      summary: Set default handle
+      tags:
+      - Handles
+    servers:
+    - url: https://api.contabo.com
+components:
+  schemas:
+    Links:
+      type: object
+      properties:
+        self:
+          type: string
+          description: Link to current resource.
+        first:
+          type: string
+          description: Link to first page, if applicable.
+        previous:
+          type: string
+          description: Link to previous page, if applicable.
+        next:
+          type: string
+          description: Link to next page, if applicable.
+        last:
+          type: string
+          description: Link to last page, if applicable.
+      required:
+      - self
+      - first
+      - last
+    HandleFindResponse:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/HandleResponse'
+        _links:
+          example:
+            self: v1/domains/handles/CA1234O1
+          allOf:
+          - $ref: '#/components/schemas/SelfLinks'
+      required:
+      - data
+      - _links
+    HandleCreateResponse:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/HandleResponse'
+        _links:
+          example:
+            self: v1/domains/handles/CA1234O1
+          allOf:
+          - $ref: '#/components/schemas/SelfLinks'
+      required:
+      - data
+      - _links
+    HandlePatchRequest:
+      type: object
+      properties:
+        alias:
+          type: string
+          maxLength: 255
+          minLength: 1
+          description: Customer-chosen alias for the handle. Unique per customer (exact, case-sensitive). Optional for now.
+          example: billing-contact
+        email:
+          type: string
+          maxLength: 255
+          minLength: 1
+          example: john.doe@test.com
+          description: Handle email
+        gender:
+          type: string
+          description: Handle gender
+          enum:
+          - male
+          - female
+          - na
+          example: male
+        birthInfo:
+          description: The birth info of the handle
+          allOf:
+          - $ref: '#/components/schemas/HandleBirthInfo'
+        address:
+          description: Address details for handle
+          allOf:
+          - $ref: '#/components/schemas/HandleAddress'
+        phone:
+          description: Handle phone
+          allOf:
+          - $ref: '#/components/schemas/HandlePhone'
+        fax:
+          description: Handle fax
+          allOf:
+          - $ref: '#/components/schemas/HandlePhone'
+        nicItEntityType:
+          type: string
+          description: 'NIC.it entity type (required for .it registrant contacts). Valid values: natural_person, individual_firm, non_profit, public_org, other, company, foreign_legal_entity.'
+          example: natural_person
+        legalStatus:
+          type: string
+          enum:
+          - company
+          - association
+          - other
+          description: Legal status of an organization handle. Applies to organization handles only and is ignored for person handles. Sent to AFNIC as AFNIC_PM_LEGAL_STATUS, which is required for every .fr contact. Defaults to company when omitted.
+          example: company
+        pin:
+          type: string
+          maxLength: 255
+          minLength: 1
+          description: Registration code / fiscal code. Required for .it registrant contacts (NIC.it NIC_IT_REG_CODE — codice fiscale or VAT number).
+          example: MRORSS77T05E472I
+        sidnLegalForm:
+          type: string
+          maxLength: 255
+          minLength: 1
+          description: SIDN legal form for .nl contacts (SIDN_LEGAL_FORM). Free-form per the SIDN schema — e.g. BV, NV, Stichting, Eenmanszaak, VOF.
+          example: BV
+        sidnLegalFormRegNo:
+          type: string
+          maxLength: 255
+          minLength: 1
+          description: SIDN legal form registration number for .nl contacts (KvK / Chamber of Commerce number, SIDN_LEGAL_REG_NO).
+          example: '12345678'
+      required:
+      - email
+      - gender
+      - address
+      - phone
+    HandleResponse:
+      type: object
+      properties:
+        tenantId:
+          type: string
+          minLength: 1
+          description: Your customer tenant id
+          example: DE
+        customerId:
+          type: string
+          minLength: 1
+          description: Your customer number
+          example: 3f184ab8-a600-4e7c-8c9b-3413e21a3752
+        handleId:
+          type: string
+          description: Handle ID
+          example: CA1234O1
+        handleType:
+          type: string
+          enum:
+          - person
+          - organization
+          description: Handle Type
+          example: person
+        isDefault:
+          type: boolean
+          description: Flag if the handle is default or not
+          example: true
+        alias:
+          type: string
+          maxLength: 255
+          minLength: 1
+          description: Customer-chosen alias for the handle. Unique per customer.
+          example: billing-contact
+        firstName:
+          type: string
+          maxLength: 255
+          minLength: 1
+          description: Handle first name
+          example: John
+        lastName:
+          type: string
+          maxLength: 255
+          minLength: 1
+          example: Doe
+          description: Handle last name
+        organization:
+          type: string
+          maxLength: 255
+          minLength: 1
+          example: Test Organization
+          description: The organization of the handle
+        email:
+          type: string
+          maxLength: 255
+          minLength: 1
+          example: john.doe@test.com
+          description: Handle email
+        gender:
+          type: string
+          description: Handle gender
+          enum:
+          - male
+          - female
+          - na
+          example: male
+        birthInfo:
+          description: The birth info of the handle
+          allOf:
+          - $ref: '#/components/schemas/HandleBirthInfo'
+        address:
+          description: Address details for handle
+          allOf:
+          - $ref: '#/components/schemas/HandleAddress'
+        phone:
+          description: Handle phone
+          allOf:
+          - $ref: '#/components/schemas/HandlePhone'
+        fax:
+          description: Handle fax
+          allOf:
+          - $ref: '#/components/schemas/HandlePhone'
+        nicItEntityType:
+          type: string
+          description: 'NIC.it entity type. Present for .it registrant contacts. Valid values: natural_person, individual_firm, non_profit, public_org, other, company, foreign_legal_entity.'
+          example: natural_person
+        pin:
+          type: string
+          maxLength: 255
+          minLength: 1
+          description: Registration code / fiscal code. Present for .it registrant contacts (NIC.it NIC_IT_REG_CODE — codice fiscale or VAT number).
+          example: MRORSS77T05E472I
+        legalStatus:
+          type: string
+          enum:
+          - company
+          - association
+          - other
+          description: Legal status of an organization handle. Present for organization handles; sent to AFNIC as AFNIC_PM_LEGAL_STATUS for .fr contacts.
+          example: company
+        sidnLegalForm:
+          type: string
+          description: SIDN legal form. Present for .nl contacts that have one set. Free-form per the SIDN schema — e.g. BV, NV, Stichting, Eenmanszaak, VOF.
+          example: BV
+        sidnLegalFormRegNo:
+          type: string
+          description: SIDN legal form registration number (KvK number). Present for .nl contacts that have one set.
+          example: '12345678'
+      required:
+      - tenantId
+      - customerId
+      - handleId
+      - handleType
+      - isDefault
+      - firstName
+      - lastName
+      - email
+      - gender
+      - address
+      - phone
+    HandleListResponse:
+      type: object
+      properties:
+        _pagination:
+          description: Data about pagination like how many results, pages, page size.
+          allOf:
+          - $ref: '#/components/schemas/PaginationMeta'
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/HandleResponse'
+        _links:
+          example:
+            first: v1/domains/handles?page=1
+            next: v1/domains/handles?page=19
+            self: v1/domains/handles
+            previous: v1/domains/handles?page=18
+            last: v1/domains/handles?page=100
+          allOf:
+          - $ref: '#/components/schemas/Links'
+      required:
+      - _pagination
+      - data
+      - _links
+    HandlePatchResponse:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/HandleResponse'
+        _links:
+          example:
+            self: v1/domains/handles/CA1234O1
+          allOf:
+          - $ref: '#/components/schemas/SelfLinks'
+      required:
+      - data
+      - _links
+    HandleCreateRequest:
+      type: object
+      properties:
+        handleType:
+          type: string
+          enum:
+          - person
+          - organization
+          example: organization
+          description: The type of the handle
+        firstName:
+          type: string
+          maxLength: 255
+          minLength: 1
+          description: Handle first name
+          example: John
+        alias:
+          type: string
+          maxLength: 255
+          minLength: 1
+          description: Customer-chosen alias for the handle. Unique per customer (exact, case-sensitive). Optional for now.
+          example: billing-contact
+        lastName:
+          type: string
+          maxLength: 255
+          minLength: 1
+          example: Doe
+          description: Handle last name
+        organization:
+          type: string
+          maxLength: 255
+          minLength: 1
+          example: Test Organization
+          description: The organization of the handle
+        email:
+          type: string
+          maxLength: 255
+          minLength: 1
+          example: john.doe@test.com
+          description: Handle email
+        gender:
+          type: string
+          description: Handle gender
+          enum:
+          - male
+          - female
+          - na
+          example: male
+        birthInfo:
+          description: The birth info of the handle
+          allOf:
+          - $ref: '#/components/schemas/HandleBirthInfo'
+        address:
+          description: Address details for handle
+          allOf:
+          - $ref: '#/components/schemas/HandleAddress'
+        phone:
+          description: Handle phone
+          allOf:
+          - $ref: '#/components/schemas/HandlePhone'
+        fax:
+          description: Handle fax
+          allOf:
+          - $ref: '#/components/schemas/HandlePhone'
+        nicItEntityType:
+          type: string
+          description: 'NIC.it entity type (required for .it registrant contacts). Valid values: natural_person, individual_firm, non_profit, public_org, other, company, foreign_legal_entity.'
+          example: natural_person
+        legalStatus:
+          type: string
+          enum:
+          - company
+          - association
+          - other
+          description: Legal status of an organization handle. Applies to organization handles only and is ignored for person handles. Sent to AFNIC as AFNIC_PM_LEGAL_STATUS, which is required for every .fr contact. Defaults to company when omitted.
+          example: company
+        pin:
+          type: string
+          maxLength: 255
+          minLength: 1
+          description: Registration code / fiscal code. Required for .it registrant contacts (NIC.it NIC_IT_REG_CODE — codice fiscale or VAT number).
+          example: MRORSS77T05E472I
+        sidnLegalForm:
+          type: string
+          maxLength: 255
+          minLength: 1
+          description: SIDN legal form for .nl contacts (SIDN_LEGAL_FORM). Free-form per the SIDN schema — e.g. BV, NV, Stichting, Eenmanszaak, VOF.
+          example: BV
+        sidnLegalFormRegNo:
+          type: string
+          maxLength: 255
+          minLength: 1
+          description: SIDN legal form registration number for .nl contacts (KvK / Chamber of Commerce number, SIDN_LEGAL_REG_NO).
+          example: '12345678'
+      required:
+      - handleType
+      - firstName
+      - lastName
+      - email
+      - gender
+      - address
+      - phone
+    SetDefaultHandleResponse:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/HandleResponse'
+        _links:
+          example:
+            self: v1/domains/handles/CA1234O1
+          allOf:
+          - $ref: '#/components/schemas/SelfLinks'
+      required:
+      - data
+      - _links
+    HandleBirthInfo:
+      type: object
+      properties:
+        date:
+          format: date-time
+          type: string
+          description: Date
+          example: '2023-03-03T12:32:03.363Z'
+        city:
+          type: string
+          maxLength: 255
+          minLength: 1
+          description: City
+          example: Munich
+        zipCode:
+          type: string
+          maxLength: 50
+          minLength: 1
+          description: Zipcode
+          example: '12345'
+        country:
+          type: string
+          maxLength: 100
+          minLength: 1
+          description: Country
+          example: DE
+    PaginationMeta:
+      type: object
+      properties:
+        size:
+          type: number
+          example: 10
+          description: Number of elements per page.
+        totalElements:
+          type: number
+          example: 100
+          description: Number of overall matched elements.
+        totalPages:
+          type: number
+          example: 10
+          description: Overall number of pages.
+        page:
+          type: number
+          example: 1
+          description: Current number of page.
+      required:
+      - size
+      - totalElements
+      - totalPages
+      - page
+    HandleAddress:
+      type: object
+      properties:
+        street:
+          type: string
+          maxLength: 255
+          minLength: 1
+          description: Street
+          example: My Street
+        streetNumber:
+          type: string
+          maxLength: 255
+          minLength: 1
+          description: Street Number
+          example: '12'
+        city:
+          type: string
+          maxLength: 100
+          minLength: 1
+          description: City
+          example: Munich
+        country:
+          type: string
+          maxLength: 100
+          minLength: 1
+          description: Country
+          example: DE
+        zipCode:
+          type: string
+          maxLength: 50
+          minLength: 1
+          description: ZipCode
+          example: '12345'
+        siret:
+          type: string
+          maxLength: 255
+          minLength: 1
+          description: Siret
+          example: '12345'
+        region:
+          type: string
+          maxLength: 255
+          minLength: 1
+          description: Region
+          example: region
+      required:
+      - street
+      - streetNumber
+      - city
+      - country
+      - zipCode
+    HandlePhone:
+      type: object
+      properties:
+        prefix:
+          type: string
+          maxLength: 5
+          minLength: 1
+          description: prefix
+          example: '+40'
+        number:
+          type: string
+          maxLength: 50
+          minLength: 1
+          description: number
+          example: '123456789'
+      required:
+      - prefix
+      - number
+    SelfLinks:
+      type: object
+      properties:
+        self:
+          type: string
+          description: Link to current resource.
+      required:
+      - self
+  securitySchemes:
+    bearer:
+      scheme: bearer
+      bearerFormat: JWT
+      type: http
+      description: 'The Contabo API requires a so called `access_token` which has to be provided in the HTTP request `Authorization` header. The special type is called `Bearer`.
+
+
+        Thus the header would look like `Authorization: Bearer <access_token>`
+
+
+        In order to get an `access_token` you need to invoke Contabo''s OAuth2 provider with the credentials you get from the [Customer Control Panel](https://my.contabo.com).
+
+        You will get a response containing an `access_token`.
+
+
+        Here is how to do it:
+
+
+        ```sh
+
+        CLIENT_ID=<ClientId from Customer Control Panel>
+
+        CLIENT_SECRET=<ClientSecret from Customer Control Panel>
+
+        API_USER=<API User from Customer Control Panel>
+
+        API_PASSWORD=''<API Password from Customer Control Panel>''
+
+        curl -d "client_id=$CLIENT_ID" -d "client_secret=$CLIENT_SECRET" --data-urlencode "username=$API_USER" --data-urlencode "password=$API_PASSWORD" -d ''grant_type=password'' ''https://auth.contabo.com/auth/realms/contabo/protocol/openid-connect/token''
+
+
+        ```
+
+
+        The response would be a complete token with an `access_token`. Please extract it and use it in your HTTP request `Authorization` header. The documentation will show you some examples by using
+
+        the command line. Please note that you can use the `cntb` CLI tool to facilitate invocation.
+
+        '
+x-refined-from:
+- contabo-api-redoc-embedded.json
+- contabo-openapi.yml
+x-tagGroups:
+- name: Compute instances
+  tags:
+  - Instances
+  - Instances Audits
+  - Instance Actions
+  - Instance Actions Audits
+  - Snapshots
+  - Snapshots Audits
+  - Applications
+- name: Compute images
+  tags:
+  - Images
+  - Images Audits
+- name: Object Storages
+  tags:
+  - Object Storages
+  - Object Storages Audits
+- name: Private Networks
+  tags:
+  - Private Networks
+  - Private Networks Audits
+- name: Tags
+  tags:
+  - Tags
+  - Tag Assignments
+  - Tags Audits
+  - Tag Assignments Audits
+- name: Users
+  tags:
+  - Users
+  - Users Object Storage Credentials
+  - Roles
+  - User Accounts
+  - Users Audits
+  - Roles Audits
+- name: Secrets
+  tags:
+  - Secrets
+  - Secrets Audits
+- name: Network Management
+  tags:
+  - VIP
+- name: Domains
+  tags:
+  - Domains
+  - Domains Audits
+  - Handles
+  - Handles Audits
+- name: DNS
+  tags:
+  - DNS
+  - DNS Audits
+- name: Firewalls
+  tags:
+  - Firewalls
+  - Firewalls Audits
+- name: Troubleshooting
+  tags:
+  - Checks
+  - Check Collection Templates
+  - Check Collections
+  - Remedies
