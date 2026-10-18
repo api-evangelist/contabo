@@ -393,6 +393,8 @@ apis:
   humanURL: https://api.contabo.com/
   baseURL: https://api.contabo.com
   tags:
+  - Image
+  tags_raw:
   - Images
   properties:
   - type: OpenAPI
@@ -1107,6 +1109,8 @@ apis:
   humanURL: https://api.contabo.com/
   baseURL: https://api.contabo.com
   tags:
+  - User
+  tags_raw:
   - Users
   properties:
   - type: OpenAPI
@@ -1137,6 +1141,8 @@ apis:
   humanURL: https://api.contabo.com/
   baseURL: https://api.contabo.com
   tags:
+  - Users-Audits
+  tags_raw:
   - Users Audits
   properties:
   - type: OpenAPI
