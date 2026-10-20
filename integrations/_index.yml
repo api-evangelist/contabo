@@ -14,3 +14,67 @@
   relationship: compatible
   status: not-a-workflow
   arazzo: null
+- slug: contabo-peeringdb-interconnection-register
+  label: PeeringDB (interconnection register)
+  partner_name: PeeringDB (interconnection register)
+  category: network interconnection register
+  type: register
+  channel: standard-directory
+  evidence: https://www.peeringdb.com/net/9171
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: PeeringDB (peeringdb.com/api net, ix, fac, org)
+    standard: null
+    spec_file: null
+    role: peeringdb-network
+    registered_name: Contabo
+    register_id: https://www.peeringdb.com/net/9171
+    matched_domain: contabo.com
+    matched_by: domain
+    asns:
+    - 40021
+    - 51167
+    - 141995
+    info_types:
+    - Content
+    ix_presence: 3
+    exchanges_operated: []
+    facilities_operated: 0
+    signal_note: 'participation only: PeeringDB is self-registered by network operators; ASNs, IX presence and facility
+      counts are context, never counted'
+    detected_by: sweep-network-edge.py
+    detected: '2026-10-20'
+  status: not-a-workflow
+  arazzo: null
+- slug: contabo-homebrew
+  label: Homebrew
+  partner: homebrew
+  partner_name: Homebrew
+  category: official CLI (Homebrew)
+  type: register
+  channel: package-registry
+  evidence: https://formulae.brew.sh/formula/cntb
+  source: edge
+  relationship: distribution-channel
+  contract_reference:
+    register: Homebrew (public package index)
+    spec_file: null
+    packages:
+    - name: cntb
+      kind: formula
+      version: '1.7'
+      released: null
+      lapsed: false
+      page: https://formulae.brew.sh/formula/cntb
+      cli: 'formula desc: Contabo Command-Line Interface (CLI)'
+      repo_leg: github-org:contabo
+      publisher_leg: artifact-github-org:contabo
+      matched_by: github-org
+    current: true
+    signal_note: 'the provider''s own command-line tool on a package manager: distribution, not an integration;
+      lapsed = no release in 24 months or deprecated / disabled by the manager'
+    detected_by: sweep-official-clis.py
+    detected: '2026-10-20'
+  status: not-a-workflow
+  arazzo: null

@@ -10,6 +10,17 @@ checked:
 - https://monid.ai/tools/contabo
 - https://n8n.io/integrations/contabo/
 - https://zapier.com/apps/contabo/integrations
+- https://manrs.org/netops/participants/
+- https://www.peeringdb.com/api/fac
+- https://www.peeringdb.com/api/ix
+- https://www.peeringdb.com/api/net
+- https://cdn.winget.microsoft.com/cache
+- https://formulae.brew.sh/api/cask.json
+- https://formulae.brew.sh/api/formula.json
+- https://github.com/ScoopInstaller/Extras
+- https://github.com/ScoopInstaller/Main
+- https://pypi.org/pypi
+- https://registry.npmjs.org
 summary: null
 marketplace_apps: []
 edges:
@@ -27,4 +38,67 @@ edges:
   quote: 'description: Manage S3 compatible Object Storage.'
   detected_by: sweep-shape-compat.py
   first_seen: '2026-10-15'
+- partner_name: PeeringDB (interconnection register)
+  partner: null
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://www.peeringdb.com/net/9171
+  category: network interconnection register
+  contract_reference:
+    register: PeeringDB (peeringdb.com/api net, ix, fac, org)
+    standard: null
+    spec_file: null
+    role: peeringdb-network
+    registered_name: Contabo
+    register_id: https://www.peeringdb.com/net/9171
+    matched_domain: contabo.com
+    matched_by: domain
+    asns:
+    - 40021
+    - 51167
+    - 141995
+    info_types:
+    - Content
+    ix_presence: 3
+    exchanges_operated: []
+    facilities_operated: 0
+    signal_note: 'participation only: PeeringDB is self-registered by network operators; ASNs, IX presence and facility
+      counts are context, never counted'
+    detected_by: sweep-network-edge.py
+    detected: '2026-10-20'
+  detected_by: sweep-network-edge.py
+  first_seen: '2026-10-20'
+- partner_name: Homebrew
+  partner: homebrew
+  partner_match: register
+  type: register
+  direction: provider-built
+  category: official CLI (Homebrew)
+  evidence: https://formulae.brew.sh/formula/cntb
+  channel: package-registry
+  relationship: distribution-channel
+  contract_reference:
+    register: Homebrew (public package index)
+    spec_file: null
+    packages:
+    - name: cntb
+      kind: formula
+      version: '1.7'
+      released: null
+      lapsed: false
+      page: https://formulae.brew.sh/formula/cntb
+      cli: 'formula desc: Contabo Command-Line Interface (CLI)'
+      repo_leg: github-org:contabo
+      publisher_leg: artifact-github-org:contabo
+      matched_by: github-org
+    current: true
+    signal_note: 'the provider''s own command-line tool on a package manager: distribution, not an integration;
+      lapsed = no release in 24 months or deprecated / disabled by the manager'
+    detected_by: sweep-official-clis.py
+    detected: '2026-10-20'
+  detected_by: sweep-official-clis.py
+  first_seen: '2026-10-20'
 templates: []
