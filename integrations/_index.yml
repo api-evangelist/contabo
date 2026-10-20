@@ -9,7 +9,7 @@
   partner_name: Amazon Web Services
   type: contract
   channel: provider-built
-  evidence: https://github.com/api-evangelist/contabo/blob/main/openapi/contabo-openapi.yml#L69
+  evidence: https://github.com/api-evangelist/contabo/blob/main/openapi/contabo-object-storages-api-openapi.yml#L17
   source: edge
   relationship: compatible
   status: not-a-workflow

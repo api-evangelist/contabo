@@ -22,9 +22,9 @@ edges:
   shape: aws-s3
   type: contract
   degree: declared-unqualified
-  evidence: https://github.com/api-evangelist/contabo/blob/main/openapi/contabo-openapi.yml#L69
+  evidence: https://github.com/api-evangelist/contabo/blob/main/openapi/contabo-object-storages-api-openapi.yml#L17
   evidence_kind: own-contract
-  quote: \nPlease note that this is not the S3 compatible API. It is not documented here.\
+  quote: 'description: Manage S3 compatible Object Storage.'
   detected_by: sweep-shape-compat.py
   first_seen: '2026-10-15'
 templates: []
