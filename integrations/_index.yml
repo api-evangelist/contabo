@@ -104,3 +104,27 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
+- slug: contabo-climate-neutral-data-centre-pact
+  label: Climate Neutral Data Centre Pact
+  partner_name: Climate Neutral Data Centre Pact
+  category: data centre sustainability pact signatory
+  type: register
+  channel: standard-directory
+  evidence: https://www.climateneutraldatacentre.net/signatories/
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: Climate Neutral Data Centre Pact signatories, Pact Operators (climateneutraldatacentre.net/signatories/)
+    standard: Climate Neutral Data Centre Pact (self-regulatory initiative)
+    spec_file: null
+    role: pact-operator-signatory
+    registered_name: contabo
+    register_id: https://contabo.com/en/
+    matched_domain: contabo.com
+    matched_by: domain
+    signal_note: 'participation only: signatory of the Pact (a self-commitment by EU data-centre operators); the
+      page is a logo wall that links each signatory''s website (the link is the identity)'
+    detected_by: sweep-data-center-tier-certification.py
+    detected: '2026-10-21'
+  status: not-a-workflow
+  arazzo: null

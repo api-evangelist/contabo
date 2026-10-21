@@ -23,6 +23,10 @@ checked:
 - https://registry.npmjs.org
 - opentofu/integrations/opentofu-integration-edges.yml
 - terraform/integrations/terraform-integration-edges.yml
+- https://uptimeinstitute.com/uptime-institute-awards/list
+- https://www.climateneutraldatacentre.net/signatories/
+- https://www.opencompute.org/membership/membership-directory
+- https://www.thegreengrid.org/en/about-us/members
 summary: null
 marketplace_apps: []
 edges:
@@ -137,4 +141,28 @@ edges:
   detected: '2026-10-21'
   detected_by: mirror-platform-listings.py
   category: infrastructure-as-code provider registry listing
+- partner_name: Climate Neutral Data Centre Pact
+  partner: null
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://www.climateneutraldatacentre.net/signatories/
+  category: data centre sustainability pact signatory
+  contract_reference:
+    register: Climate Neutral Data Centre Pact signatories, Pact Operators (climateneutraldatacentre.net/signatories/)
+    standard: Climate Neutral Data Centre Pact (self-regulatory initiative)
+    spec_file: null
+    role: pact-operator-signatory
+    registered_name: contabo
+    register_id: https://contabo.com/en/
+    matched_domain: contabo.com
+    matched_by: domain
+    signal_note: 'participation only: signatory of the Pact (a self-commitment by EU data-centre operators); the
+      page is a logo wall that links each signatory''s website (the link is the identity)'
+    detected_by: sweep-data-center-tier-certification.py
+    detected: '2026-10-21'
+  detected_by: sweep-data-center-tier-certification.py
+  first_seen: '2026-10-21'
 templates: []
