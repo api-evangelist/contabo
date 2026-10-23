@@ -1,0 +1,14 @@
+{
+  "repo": "contabo",
+  "feeds": [
+    {
+      "source": "https://contabo.com/blog/",
+      "feed_url": "https://contabo.com/blog/feed/",
+      "title": "",
+      "saved": 2,
+      "method": "discovered"
+    }
+  ],
+  "post_count": 2,
+  "fetched": "2026-10-17T14:53:57Z"
+}
